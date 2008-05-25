@@ -1,0 +1,90 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\Arquivos de programas\CCStudio_v3.3\MyProjects\theora-DM6446\"
+ProjectType=Executable
+CPUFamily=TMS320C64XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Project Dependencies]
+Source="..\ogg-DM6446\ogg-DM6446.pjt"
+Source="..\vorbis-DM6446\vorbis-DM6446.pjt"
+
+["..\ogg-DM6446\ogg-DM6446.pjt" Settings]
+MatchConfigName=true
+
+["..\vorbis-DM6446\vorbis-DM6446.pjt" Settings]
+MatchConfigName=true
+
+[Source Files]
+Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
+Source="apiwrapper.c"
+Source="bitwise.c"
+Source="blockmap.c"
+Source="cpu.c"
+Source="dct.c"
+Source="dct_decode.c"
+Source="dct_decode_mmx.c"
+Source="dct_encode.c"
+Source="decapiwrapper.c"
+Source="decinfo.c"
+Source="decode.c"
+Source="dequant.c"
+Source="dsp.c"
+Source="dsp_mmx.c"
+Source="dsp_mmxext.c"
+Source="encapiwrapper.c"
+Source="encode.c"
+Source="encoder_example.c"
+Source="encoder_huffman.c"
+Source="encoder_idct.c"
+Source="encoder_quant.c"
+Source="encoder_toplevel.c"
+Source="fdct_mmx.c"
+Source="fragment.c"
+Source="frarray.c"
+Source="frinit.c"
+Source="getopt.c"
+Source="huffdec.c"
+Source="idct.c"
+Source="idct_mmx.c"
+Source="info.c"
+Source="internal.c"
+Source="mcomp.c"
+Source="misc_common.c"
+Source="mmxfrag.c"
+Source="mmxidct.c"
+Source="mmxstate.c"
+Source="pb.c"
+Source="pp.c"
+Source="quant.c"
+Source="recon_mmx.c"
+Source="reconstruct.c"
+Source="scan.c"
+Source="state.c"
+Source="x86state.c"
+Source="lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\theora-DM6446.map" -o".\Debug\theora-DM6446.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\theora-DM6446.map" -o".\Release\theora-DM6446.out" -w -x
+
+["lnk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["lnk.cmd" Settings: "Release"]
+LinkOrder=1
+

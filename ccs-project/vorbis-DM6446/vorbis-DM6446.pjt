@@ -1,0 +1,59 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="G:\Arquivos de programas\CCStudio_v3.3\MyProjects\vorbis-DM6446\"
+ProjectType=Library
+CPUFamily=TMS320C64XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Project Dependencies]
+Source="..\ogg-DM6446\ogg-DM6446.pjt"
+
+["..\ogg-DM6446\ogg-DM6446.pjt" Settings]
+MatchConfigName=true
+
+[Source Files]
+Source="..\..\c6400\dsplib\lib\dsp64x.lib"
+Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
+Source="analysis.c"
+Source="barkmel.c"
+Source="bitrate.c"
+Source="block.c"
+Source="codebook.c"
+Source="envelope.c"
+Source="floor0.c"
+Source="floor1.c"
+Source="info.c"
+Source="lookup.c"
+Source="lpc.c"
+Source="lsp.c"
+Source="mapping0.c"
+Source="mdct.c"
+Source="psy.c"
+Source="registry.c"
+Source="res0.c"
+Source="sharedbook.c"
+Source="smallft.c"
+Source="synthesis.c"
+Source="tone.c"
+Source="vorbisenc.c"
+Source="vorbisfile.c"
+Source="window.c"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o".\Debug\vorbis-DM6446.lib"
+
+["Archiver" Settings: "Release"]
+Options=-r -o".\Release\vorbis-DM6446.lib"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
+
