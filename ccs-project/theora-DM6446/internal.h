@@ -14,6 +14,9 @@
     last mod: $Id: internal.h 14714 2008-04-12 01:04:43Z giles $
 
  ********************************************************************/
+#ifndef INTERNAL_H
+#define INTERNAL_H
+
 
 #if !defined(_internal_H)
 # define _internal_H (1)
@@ -32,22 +35,15 @@
 extern long dframe;
 extern FILE *debugout;
 
-#ifdef _TH_DEBUG_
-
-int do_something(const char *format, ...) {
+int do_nothing (char* format, ...);
+/*int do_something(const char *format, ...) {
 	va_list vl;
 	va_start(vl, format);
 	return fprintf(debugout, format, vl);
-}
+}*/
 
-#define TH_DEBUG do_something
-
-#else
-
-int do_nothing (char* format, ...);
+//#define TH_DEBUG do_something
 #define TH_DEBUG do_nothing
-
-#endif
 
 /*Thank you Microsoft, I know the order of operations.*/
 # if defined(_MSC_VER)
@@ -513,5 +509,7 @@ struct oc_state_dispatch_vtbl{
   oc_state_granule_frame_func granule_frame;
   oc_state_granule_time_func  granule_time;
 };
+
+#endif
 
 #endif

@@ -10,7 +10,7 @@
 
 MEMORY
 {
-    PMEM :   o = 00000020h   l = 0000ffe0h 
+	PMEM:    o = 00000020h   l = 000f0000h
     EMIFB:   o = 60000000h   l = 10000000h
     EMIFA:   o = 80000000h   l = 40000000h 
 } 

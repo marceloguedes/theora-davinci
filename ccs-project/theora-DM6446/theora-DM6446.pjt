@@ -22,7 +22,9 @@ MatchConfigName=true
 MatchConfigName=true
 
 [Source Files]
+Source="..\..\C6000\cgtools\lib\rts6400.lib"
 Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
+Source="..\vorbis-DM6446\Debug\vorbis-DM6446.lib"
 Source="apiwrapper.c"
 Source="bitwise.c"
 Source="blockmap.c"
@@ -77,7 +79,7 @@ Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400
 Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
 
 ["Linker" Settings: "Debug"]
-Options=-c -m".\Debug\theora-DM6446.map" -o".\Debug\theora-DM6446.out" -w -x
+Options=-c -m".\Debug\theora-DM6446.map" -o".\Debug\theora-DM6446.out" -w -x -i"G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\include"
 
 ["Linker" Settings: "Release"]
 Options=-c -m".\Release\theora-DM6446.map" -o".\Release\theora-DM6446.out" -w -x

@@ -1,8 +1,6 @@
 -------------------------  theora-DM6446.pjt - Debug  -------------------------
 [apiwrapper.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "apiwrapper.c"
 
-[bitwise.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "bitwise.c"
-
 [blockmap.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "blockmap.c"
 
 [cpu.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "cpu.c"
@@ -52,8 +50,6 @@
 "encode.c", line 1014: warning: enumerated type mixed with another type
 "encode.c", line 1039: warning: enumerated type mixed with another type
 
-[encoder_example.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "encoder_example.c"
-
 [encoder_huffman.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "encoder_huffman.c"
 
 [encoder_idct.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "encoder_idct.c"
@@ -70,11 +66,7 @@
 
 [frinit.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "frinit.c"
 
-[getopt.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "getopt.c"
-
 [huffdec.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "huffdec.c"
-
-[idct.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "idct.c"
 
 [idct_mmx.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "idct_mmx.c"
 
@@ -110,12 +102,18 @@
 
 [Linking...] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -@"Debug.lkf"
 <Linking>
->>   error: can't allocate .text, size 00085d80 (page 0) in PMEM (avail:
-            0000ffe0)
->> warning: entry point symbol _c_int00 undefined
->>   error: errors in input - ./Debug/theora-DM6446.out not built
+
+undefined                        first referenced
+ symbol                              in file
+---------                        ----------------
+_dframe                          G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\theora-DM6446\\Debug\\decode.obj
+_do_nothing                      G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\theora-DM6446\\Debug\\decode.obj
+_rint                            G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\theora-DM6446\\Debug\\encoder_example.obj
+_getopt_long                     G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\theora-DM6446\\Debug\\encoder_example.obj
+_alloca                          G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\vorbis-DM6446\\Debug\\vorbis-DM6446.lib
+>>   error: symbol referencing errors - './Debug/theora-DM6446.out' not built
 
 >> Compilation failure
 
 Build Complete,
-  3 Errors, 20 Warnings, 0 Remarks.
+  2 Errors, 19 Warnings, 0 Remarks.
