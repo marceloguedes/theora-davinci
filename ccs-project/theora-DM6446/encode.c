@@ -1488,16 +1488,22 @@ void WriteFrameHeader( CP_INSTANCE *cpi) {
   ogg_uint32_t i;
   oggpack_buffer *opb=cpi->oggbuffer;
 
-  TH_DEBUG("\n>>>> beginning frame %ld\n\n",dframe);
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("\n>>>> beginning frame %ld\n\n",dframe);
+  #endif
 
   /* Output the frame type (base/key frame or inter frame) */
   oggpackB_write( opb, cpi->pb.FrameType, 1 );
-  TH_DEBUG("frame type = video, %s\n",cpi->pb.FrameType?"predicted":"key");
+  #ifdef _TH_DEBUG_
+	TH_DEBUG("frame type = video, %s\n",cpi->pb.FrameType?"predicted":"key");
+  #endif
   
   /* Write out details of the current value of Q... variable resolution. */
   for ( i = 0; i < Q_TABLE_SIZE; i++ ) {
     if ( cpi->pb.ThisFrameQualityValue == cpi->pb.QThreshTable[i] ) {
-      TH_DEBUG("frame quality = { %d }\n",i);
+	  #ifdef _TH_DEBUG_
+	      TH_DEBUG("frame quality = { %d }\n",i);
+	  #endif
       oggpackB_write( opb, i, 6 );
       break;
     }

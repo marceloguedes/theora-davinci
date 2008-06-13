@@ -47,10 +47,10 @@
 #include "vorbis_codec.h"
 #include "vorbis_vorbisenc.h"
 
-#ifdef _WIN32
+//#ifdef _WIN32
 /*supply missing headers and functions to Win32. going to hell, I know*/
-#include <fcntl.h>
-#include <io.h>
+//#include <fcntl.h> -> commented in the port
+//#include <io.h> -> commented in the port
 
 static double rint(double x)
 {
@@ -59,7 +59,7 @@ static double rint(double x)
   else
     return (double)(int)(x + 0.5);
 }
-#endif
+//#endif
 
 const char *optstring = "o:a:A:v:V:s:S:f:F:c";
 struct option options [] = {

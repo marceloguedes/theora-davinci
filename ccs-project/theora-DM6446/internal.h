@@ -35,15 +35,14 @@
 extern long dframe;
 extern FILE *debugout;
 
-int do_nothing (char* format, ...);
+//int TH_DEBUG (char* format, ...) {
+//	return 0;
+//}
 /*int do_something(const char *format, ...) {
 	va_list vl;
 	va_start(vl, format);
 	return fprintf(debugout, format, vl);
 }*/
-
-//#define TH_DEBUG do_something
-#define TH_DEBUG do_nothing
 
 /*Thank you Microsoft, I know the order of operations.*/
 # if defined(_MSC_VER)

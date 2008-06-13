@@ -28,8 +28,8 @@
 
 #ifdef _TH_DEBUG_
 FILE *debugout=NULL;
-long dframe=0;
 #endif
+long dframe=0;
 
 #define A_TABLE_SIZE        29
 #define DF_CANDIDATE_WINDOW 5

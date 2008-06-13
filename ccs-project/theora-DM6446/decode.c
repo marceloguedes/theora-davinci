@@ -211,36 +211,53 @@ static void oc_dec_clear(oc_dec_ctx *_dec){
 static int oc_dec_frame_header_unpack(oc_dec_ctx *_dec){
   long val;
 
-  TH_DEBUG("\n>>>> beginning frame %ld\n\n",dframe);
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("\n>>>> beginning frame %ld\n\n",dframe);
+  #endif
 
   /*Check to make sure this is a data packet.*/
   theorapackB_read1(&_dec->opb,&val);
-  TH_DEBUG("frame type = %s, ",val==0?"video":"unknown");
+
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("frame type = %s, ",val==0?"video":"unknown");
+  #endif
+
   if(val!=0)return TH_EBADPACKET;
   /*Read in the frame type (I or P).*/
   theorapackB_read1(&_dec->opb,&val);
   _dec->state.frame_type=(int)val;
-  TH_DEBUG("%s\n",val?"predicted":"key");
+
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("%s\n",val?"predicted":"key");
+  #endif
   /*Read in the current qi.*/
   theorapackB_read(&_dec->opb,6,&val);
   _dec->state.qis[0]=(int)val;
-  TH_DEBUG("frame quality = { %ld ",val);
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("frame quality = { %ld ",val);
+  #endif
   theorapackB_read1(&_dec->opb,&val);
   if(!val)_dec->state.nqis=1;
   else{
     theorapackB_read(&_dec->opb,6,&val);
     _dec->state.qis[1]=(int)val;
-    TH_DEBUG("%ld ",val);
+	#ifdef _TH_DEBUG_
+    	TH_DEBUG("%ld ",val);
+	#endif
     theorapackB_read1(&_dec->opb,&val);
     if(!val)_dec->state.nqis=2;
     else{
       theorapackB_read(&_dec->opb,6,&val);
-      TH_DEBUG("%ld ",val);
+	  #ifdef _TH_DEBUG_
+    	  TH_DEBUG("%ld ",val);
+	  #endif
       _dec->state.qis[2]=(int)val;
       _dec->state.nqis=3;
     }
   }
-  TH_DEBUG("}\n");
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("}\n");
+  #endif
 
   if(_dec->state.frame_type==OC_INTRA_FRAME){
     /*Keyframes have 3 unused configuration bits, holdovers from VP3 days.
@@ -526,7 +543,10 @@ static void oc_dec_mb_modes_unpack(oc_dec_ctx *_dec){
   int                  mode_scheme;
   theorapackB_read(&_dec->opb,3,&val);
   mode_scheme=(int)val;
-  TH_DEBUG("mode encode scheme = %d\n",(int)val);
+
+  #ifdef _TH_DEBUG_
+  	TH_DEBUG("mode encode scheme = %d\n",(int)val);
+  #endif
 
   if(mode_scheme==0){
     int mi;
@@ -534,15 +554,21 @@ static void oc_dec_mb_modes_unpack(oc_dec_ctx *_dec){
       If the bitstream doesn't contain each index exactly once, it's likely
        corrupt and the rest of the packet is garbage anyway, but this way we
        won't crash, and we'll decode SOMETHING.*/
-    TH_DEBUG("mode scheme list = { ");
+	#ifdef _TH_DEBUG_
+    	TH_DEBUG("mode scheme list = { ");
+	#endif
     /*LOOP VECTORIZES.*/
     for(mi=0;mi<OC_NMODES;mi++)scheme0_alphabet[mi]=OC_MODE_INTER_NOMV;
     for(mi=0;mi<OC_NMODES;mi++){
       theorapackB_read(&_dec->opb,3,&val);
       scheme0_alphabet[val]=OC_MODE_ALPHABETS[6][mi];
-      TH_DEBUG("%d ",(int)val);
+	  #ifdef _TH_DEBUG_
+	      TH_DEBUG("%d ",(int)val);
+	  #endif
     }
-    TH_DEBUG("}\n");
+	#ifdef _TH_DEBUG_
+    	TH_DEBUG("}\n");
+	#endif
     alphabet=scheme0_alphabet;
   }else 
     alphabet=OC_MODE_ALPHABETS[mode_scheme-1];
@@ -553,7 +579,9 @@ static void oc_dec_mb_modes_unpack(oc_dec_ctx *_dec){
   mb=_dec->state.mbs;
   mb_end=mb+_dec->state.nmbs;
 
-  TH_DEBUG("mode list = { ");
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("mode list = { ");
+  #endif
   for(j=0;mb<mb_end;mb++){
     if(mb->mode!=OC_MODE_INVALID){
       int bi;
@@ -576,7 +604,9 @@ static void oc_dec_mb_modes_unpack(oc_dec_ctx *_dec){
 	mb->mode=OC_MODE_INTER_NOMV;
     }
   }
-  TH_DEBUG("\n}\n");
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("\n}\n");
+  #endif
 }
 
 
@@ -636,7 +666,9 @@ static void oc_dec_mv_unpack_and_frag_modes_fill(oc_dec_ctx *_dec){
   oc_mv                   cbmvs[4];
   set_chroma_mvs=OC_SET_CHROMA_MVS_TABLE[_dec->state.info.pixel_fmt];
   theorapackB_read1(&_dec->opb,&val);
-  TH_DEBUG("motion vector table = %d\n",(int)val);
+  #ifdef _TH_DEBUG_
+  	TH_DEBUG("motion vector table = %d\n",(int)val);
+  #endif
   mv_comp_unpack=val?oc_clc_mv_comp_unpack:oc_vlc_mv_comp_unpack;
   map_idxs=OC_MB_MAP_IDXS[_dec->state.info.pixel_fmt];
   map_nidxs=OC_MB_MAP_NIDXS[_dec->state.info.pixel_fmt];
@@ -644,7 +676,9 @@ static void oc_dec_mv_unpack_and_frag_modes_fill(oc_dec_ctx *_dec){
   mb=_dec->state.mbs;
   mb_end=mb+_dec->state.nmbs;
 
-  TH_DEBUG("motion vectors = {");
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("motion vectors = {");
+  #endif
 
   for(;mb<mb_end;mb++)if(mb->mode!=OC_MODE_INVALID){
     oc_fragment *frag;
@@ -774,7 +808,9 @@ static void oc_dec_mv_unpack_and_frag_modes_fill(oc_dec_ctx *_dec){
     }
   }
 
-  TH_DEBUG("\n}\n");
+  #ifdef _TH_DEBUG_
+	  TH_DEBUG("\n}\n");
+  #endif
 
 }
 

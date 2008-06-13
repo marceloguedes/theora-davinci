@@ -45,12 +45,12 @@
 #  define M_PI (3.1415926536f)
 #endif
 
-#if defined(_WIN32) && !defined(__SYMBIAN32__)
+//#if defined(_WIN32) && !defined(__SYMBIAN32__)
 //#  include <malloc.h>
 #  define rint(x)   (floor((x)+0.5f)) 
 #  define NO_FLOAT_MATH_LIB
 #  define FAST_HYPOT(a, b) sqrt((a)*(a) + (b)*(b))
-#endif
+//#endif
 
 #if defined(__SYMBIAN32__) && defined(__WINS__)
 void *_alloca(size_t size);
