@@ -1063,8 +1063,9 @@ int fetch_and_process_video(FILE *video,ogg_page *videopage,
   return videoflag;
 }
 
-int main(int argc,char *argv[]){
-  int c,long_option_index,ret;
+int main(){
+  int c,long_option_index,ret, optind = 0;
+  char* optarg = NULL;
 
   ogg_stream_state to; /* take physical pages, weld into a logical
                            stream of packets */
@@ -1104,8 +1105,8 @@ int main(int argc,char *argv[]){
   _setmode( _fileno( stdout ), _O_BINARY );
 #endif
 
-  while((c=getopt_long(argc,argv,optstring,options,&long_option_index))!=EOF){
-    switch(c){
+  //while((c=getopt_long(argc,argv,optstring,options,&long_option_index))!=EOF){
+/*    switch(c){
     case 'o':
       outfile=fopen(optarg,"wb");
       if(outfile==NULL){
@@ -1173,13 +1174,16 @@ int main(int argc,char *argv[]){
     default:
       usage();
     }
-  }
+  //}*/
 
-  while(optind<argc){
-    /* assume that anything following the options must be a filename */
-    id_file(argv[optind]);
-    optind++;
-  }
+	// Output File
+	outfile= fopen("C:\\samples\\yuv\\stream.out.yuv", "wb");
+    if(outfile==NULL){
+      fprintf(stderr,"Unable to open output file '%s'\n", optarg);
+      exit(1);
+    }
+
+    id_file("C:\\samples\\yuv\\stream.yuv");
 
   /* yayness.  Set up Ogg output stream */
   srand(time(NULL));

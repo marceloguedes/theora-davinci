@@ -20,6 +20,7 @@ MatchConfigName=true
 [Source Files]
 Source="..\..\c6400\dsplib\lib\dsp64x.lib"
 Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
+Source="alloca.c"
 Source="analysis.c"
 Source="barkmel.c"
 Source="bitrate.c"

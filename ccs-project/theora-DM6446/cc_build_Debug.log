@@ -1,15 +1,12 @@
 -------------------------  theora-DM6446.pjt - Debug  -------------------------
+[encoder_example.c] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"G:/Arquivos de programas/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400 -@"Debug.lkf" "encoder_example.c"
+"encoder_example.c", line 1067: warning: variable "c" was declared but never referenced
+"encoder_example.c", line 1067: warning: variable "long_option_index" was declared but never referenced
+"encoder_example.c", line 1067: warning: variable "optind" was declared but never referenced
+"encoder_example.c", line 125: warning: function "usage" was declared but never referenced
+
 [Linking...] "G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -@"Debug.lkf"
 <Linking>
 
-undefined                        first referenced
- symbol                              in file
----------                        ----------------
-_getopt_long                     G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\theora-DM6446\\Debug\\encoder_example.obj
-_alloca                          G:\\Arquivos de programas\\CCStudio_v3.3\\MyProjects\\vorbis-DM6446\\Debug\\vorbis-DM6446.lib
->>   error: symbol referencing errors - './Debug/theora-DM6446.out' not built
-
->> Compilation failure
-
 Build Complete,
-  2 Errors, 0 Warnings, 0 Remarks.
+  0 Errors, 4 Warnings, 0 Remarks.

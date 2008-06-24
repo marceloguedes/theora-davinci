@@ -1,1 +1,1 @@
-#define alloca malloc
+void* alloca(int q);
