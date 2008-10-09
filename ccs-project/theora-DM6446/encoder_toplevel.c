@@ -904,7 +904,11 @@ int theora_encode_init(theora_state *th, theora_info *c){
   memset(th, 0, sizeof(*th));
   /*Currently only the 4:2:0 format is supported.*/
   if(c->pixelformat!=OC_PF_420)return OC_IMPL;
-  th->internal_encode=cpi=_ogg_calloc(1,sizeof(*cpi));
+  printf("%d\n", sizeof(*cpi));
+  cpi=_ogg_calloc(1, sizeof(*cpi));
+  //cpi=_ogg_calloc(1, 10000);
+  printf("%08x\n", cpi);
+  th->internal_encode=cpi;
   theora_encode_dispatch_init(cpi);
 
   dsp_static_init (&cpi->dsp);
@@ -969,7 +973,10 @@ int theora_encode_init(theora_state *th, theora_info *c){
   if(c->target_bitrate>(1<<24)-1)c->target_bitrate=(1<<24)-1;
 
   /* copy in config */
-  memcpy(&cpi->pb.info,c,sizeof(*c));
+  printf("c->width: %d\n", c->width);
+  printf("cpi->pb.info.width: %d\n", cpi->pb.info.width);
+  memcpy(&(cpi->pb.info),c,sizeof(*c));
+  printf("cpi->pb.info.width: %d\n", cpi->pb.info.width);
   th->i=&cpi->pb.info;
   th->granulepos=-1;
 
@@ -999,6 +1006,7 @@ int theora_encode_init(theora_state *th, theora_info *c){
   /* Note the height and width in the pre-processor control structure. */
   cpi->ScanConfig.VideoFrameHeight = cpi->pb.info.height;
   cpi->ScanConfig.VideoFrameWidth = cpi->pb.info.width;
+  printf("cpi->pb.info.width: %d\n", cpi->pb.info.width);
 
   InitFrameDetails(&cpi->pb);
   EInitFragmentInfo(cpi);

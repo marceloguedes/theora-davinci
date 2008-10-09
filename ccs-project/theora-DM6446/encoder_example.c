@@ -1177,13 +1177,13 @@ int main(){
   //}*/
 
 	// Output File
-	outfile= fopen("C:\\samples\\yuv\\stream.out.yuv", "wb");
+	outfile= fopen("C:\\sample\\stream.out.yuv", "wb");
     if(outfile==NULL){
       fprintf(stderr,"Unable to open output file '%s'\n", optarg);
       exit(1);
     }
 
-    id_file("C:\\samples\\yuv\\stream.yuv");
+    id_file("C:\\sample\\stream.yuv");
 
   /* yayness.  Set up Ogg output stream */
   srand(time(NULL));
@@ -1204,7 +1204,9 @@ int main(){
   pic_x=frame_w-pic_w>>1&~1;
   pic_y=frame_h-pic_h>>1&~1;
 
+  printf("ok1\n");
   th_info_init(&ti);
+  printf("ok2\n");
   ti.frame_width=frame_w;
   ti.frame_height=frame_h;
   ti.pic_width=pic_w;
@@ -1229,6 +1231,7 @@ int main(){
   td=th_encode_alloc(&ti);
   th_info_clear(&ti);
 
+  printf("ok\n");
   if(vp3_compatible){
     ret=th_encode_ctl(td,TH_ENCCTL_SET_VP3_COMPATIBLE,&vp3_compatible,
      sizeof(vp3_compatible));

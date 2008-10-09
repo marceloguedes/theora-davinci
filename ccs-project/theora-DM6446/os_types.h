@@ -23,6 +23,12 @@
 #define _ogg_calloc  calloc
 #define _ogg_realloc realloc
 #define _ogg_free    free
+//#include <stdio.h>
+#include <stdlib.h>
+
+//void* _ogg_calloc(size_t _num, size_t _size);
+//void* _ogg_malloc(size_t _size);
+//void* _ogg_realloc(void *_ptr, size_t _size);
 
 typedef signed short ogg_int16_t;
 typedef unsigned short ogg_uint16_t;

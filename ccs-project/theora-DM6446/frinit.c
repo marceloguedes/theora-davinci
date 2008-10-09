@@ -28,7 +28,7 @@ void InitializeFragCoordinates(PB_INSTANCE *pbi){
   ogg_uint32_t StartFrag = 0;
 
   /* Y */
-
+  printf("HorizFrags: %d VertFrags: %d\n", HorizFrags, VertFrags);
   for(i = 0; i< VertFrags; i++){
     for(j = 0; j< HorizFrags; j++){
 
@@ -397,6 +397,7 @@ void InitFrameDetails(PB_INSTANCE *pbi){
   /* Useful externals */
   pbi->MacroBlocks = ((pbi->VFragments+1)/2)*((pbi->HFragments+1)/2);
 
+  printf("pbi->VFragments: %d\n", pbi->VFragments);
   InitFragmentInfo(pbi);
   InitFrameInfo(pbi, FrameSize);
   InitializeFragCoordinates(pbi);

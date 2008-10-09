@@ -75,6 +75,7 @@ struct th_enc_ctx{
 th_enc_ctx *th_encode_alloc(const th_info *_info){
   theora_info  ci;
   th_enc_ctx  *enc;
+  printf("%08x\n", enc);
   th_info2theora_info(&ci,_info);
   /*Do a bunch of checks the new API does, but the old one didn't.*/
   if((_info->frame_width&0xF)||(_info->frame_height&0xF)||
@@ -89,6 +90,9 @@ th_enc_ctx *th_encode_alloc(const th_info *_info){
   }
   else{
     enc=(th_enc_ctx *)_ogg_malloc(sizeof(*enc));
+	//enc=(th_enc_ctx *)_ogg_malloc(10000);
+	printf("%08x\n", enc);
+	printf("ci.width: %d\n", ci.width);
     if(theora_encode_init(&enc->state,&ci)<0){
       _ogg_free(enc);
       enc=NULL;

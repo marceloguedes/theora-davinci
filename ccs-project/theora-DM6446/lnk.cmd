@@ -5,26 +5,25 @@
 /*  may need changes to account for differences in the memory map.          */
 /****************************************************************************/
 -c
--heap  0x2000
--stack 0x4000
+-heap  0x800000
+-stack 0x100000
 
 MEMORY
 {
-	PMEM:    o = 00000020h   l = 000f0000h
-    EMIFB:   o = 60000000h   l = 10000000h
-    EMIFA:   o = 80000000h   l = 40000000h 
+	DDR2: o = 80000000h   l = 01000000h
+	HEAP: o = 82000000h   l = 00800000h
 } 
 
 SECTIONS
 {
-    .text       >       PMEM
-    .stack      >       EMIFB
-    .bss        >       EMIFB
-    .cinit      >       EMIFB
-    .cio        >       EMIFB 
-    .const      >       EMIFB
-    .data       >       EMIFB
-    .switch     >       EMIFB 
-    .sysmem     >       EMIFB
-    .far        >       EMIFA
+    .text       >       DDR2
+    .stack      >       DDR2
+    .bss        >       DDR2
+    .cinit      >       DDR2
+    .cio        >       DDR2 
+    .const      >       DDR2
+    .data       >       DDR2
+    .switch     >       DDR2 
+    .sysmem     >       HEAP
+    .far        >       DDR2
 }

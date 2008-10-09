@@ -1,13 +1,13 @@
 ; Code Composer Project File, Version 2.0 (do not modify or remove this line)
 
 [Project Settings]
-ProjectDir="G:\Arquivos de programas\CCStudio_v3.3\MyProjects\theora-DM6446\"
-ProjectType=Executable
+ProjectDir="C:\CCStudio_v3.3\MyProjects\theora-DM6446\"
+ProjectType=Library
 CPUFamily=TMS320C64XX
+Tool="Archiver"
 Tool="Compiler"
 Tool="CustomBuilder"
 Tool="DspBiosBuilder"
-Tool="Linker"
 Config="Debug"
 Config="Release"
 
@@ -22,9 +22,6 @@ MatchConfigName=true
 MatchConfigName=true
 
 [Source Files]
-Source="..\..\C6000\cgtools\lib\rts6400.lib"
-Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
-Source="..\vorbis-DM6446\Debug\vorbis-DM6446.lib"
 Source="apiwrapper.c"
 Source="bitwise.c"
 Source="blockmap.c"
@@ -42,7 +39,6 @@ Source="dsp_mmx.c"
 Source="dsp_mmxext.c"
 Source="encapiwrapper.c"
 Source="encode.c"
-Source="encoder_example.c"
 Source="encoder_huffman.c"
 Source="encoder_idct.c"
 Source="encoder_quant.c"
@@ -69,23 +65,16 @@ Source="reconstruct.c"
 Source="scan.c"
 Source="state.c"
 Source="x86state.c"
-Source="lnk.cmd"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o".\Debug\theora-DM6446.lib"
+
+["Archiver" Settings: "Release"]
+Options=-r -o".\Release\libtheora-DM6446.lib"
 
 ["Compiler" Settings: "Debug"]
-Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400
+Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400+
 
 ["Compiler" Settings: "Release"]
 Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
-
-["Linker" Settings: "Debug"]
-Options=-c -m".\Debug\theora-DM6446.map" -o".\Debug\theora-DM6446.out" -w -x -i"G:\Arquivos de programas\CCStudio_v3.3\C6000\cgtools\include"
-
-["Linker" Settings: "Release"]
-Options=-c -m".\Release\theora-DM6446.map" -o".\Release\theora-DM6446.out" -w -x
-
-["lnk.cmd" Settings: "Debug"]
-LinkOrder=1
-
-["lnk.cmd" Settings: "Release"]
-LinkOrder=1
 
