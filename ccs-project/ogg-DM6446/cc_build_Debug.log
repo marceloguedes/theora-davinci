@@ -1,3 +1,11 @@
 ---------------------------  ogg-DM6446.pjt - Debug  ---------------------------
+[bitwise.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/ogg-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "bitwise.c"
+
+[framing.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/ogg-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "framing.c"
+
+[Archiving...] "C:\CCStudio_v3.3\C6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'C:\CCStudio_v3.3\MyProjects\ogg-DM6446\Debug\ogg-DM6446.lib'
+  ==>  building archive 'C:\CCStudio_v3.3\MyProjects\ogg-DM6446\Debug\ogg-DM6446.lib'
+
 Build Complete,
   0 Errors, 0 Warnings, 0 Remarks.

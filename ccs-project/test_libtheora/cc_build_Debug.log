@@ -1,0 +1,10 @@
+-------------------------  test_libtheora.pjt - Debug  -------------------------
+[dump_video.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -fr"C:/CCStudio_v3.3/MyProjects/test_libtheora/Debug" -i"C:/CCStudio_v3.3/C6000/cgtools/include" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dump_video.c"
+"dump_video.c", line 108: warning: variable "j" was declared but never referenced
+"dump_video.c", line 162: warning: variable "bytes" was set but never used
+
+[Linking...] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 2 Warnings, 0 Remarks.

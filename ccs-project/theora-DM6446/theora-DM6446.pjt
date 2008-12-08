@@ -73,7 +73,7 @@ Options=-r -o".\Debug\theora-DM6446.lib"
 Options=-r -o".\Release\libtheora-DM6446.lib"
 
 ["Compiler" Settings: "Debug"]
-Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400+
+Options=-g -o3 -fr"$(Proj_dir)\Debug" -d"_DEBUG" -mv6400+
 
 ["Compiler" Settings: "Release"]
 Options=-o3 -fr"$(Proj_dir)\Release" -mv6400

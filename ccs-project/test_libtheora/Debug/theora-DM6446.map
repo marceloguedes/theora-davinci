@@ -1,0 +1,741 @@
+******************************************************************************
+          TMS320C6x COFF Linker PC v6.0.8                      
+******************************************************************************
+>> Linked Mon Dec 08 19:52:58 2008
+
+OUTPUT FILE NAME:   <./Debug/test_theora-DM6446.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 80013e80
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DDR2                  80000000   01000000  002eaaba  00d15546  RWIX
+  HEAP                  82000000   00800000  00800000  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.data      0    80000000    00000000     UNINITIALIZED
+
+.text      0    80000000    00014320     
+                  80000000    000055a0     theora-DM6446.lib : decode.obj (.text)
+                  800055a0    000022c0                       : state.obj (.text)
+                  80007860    000017c0     ogg-DM6446.lib : framing.obj (.text)
+                  80009020    000008e0     theora-DM6446.lib : decinfo.obj (.text)
+                  80009900    00000880     dump_video.obj (.text)
+                  8000a180    000007e0     theora-DM6446.lib : huffdec.obj (.text)
+                  8000a960    000006c0                       : fragment.obj (.text)
+                  8000b020    000006c0                       : idct.obj (.text)
+                  8000b6e0    000005a0                       : dequant.obj (.text)
+                  8000bc80    000004a0                       : info.obj (.text)
+                  8000c120    00000460                       : quant.obj (.text)
+                  8000c580    00000440                       : decapiwrapper.obj (.text)
+                  8000c9c0    00000420     rts64plus.lib : _printfi.obj (.text:__setfield)
+                  8000cde0    000003c0     theora-DM6446.lib : apiwrapper.obj (.text)
+                  8000d1a0    00000360                       : internal.obj (.text)
+                  8000d500    00000360     rts64plus.lib : _printfi.obj (.text:__getarg_diouxp)
+                  8000d860    00000360                   : _printfi.obj (.text:__printfi)
+                  8000dbc0    00000340     theora-DM6446.lib : bitwise.obj (.text)
+                  8000df00    00000300     rts64plus.lib : _printfi.obj (.text:_ecvt)
+                  8000e200    00000300                   : _printfi.obj (.text:_fcvt)
+                  8000e500    00000300                   : fputs.obj (.text:_fputs)
+                  8000e800    000002e0                   : _printfi.obj (.text:__fcpy)
+                  8000eae0    000002e0                   : _printfi.obj (.text:__pproc_fwp)
+                  8000edc0    000002e0                   : memory.obj (.text:_realloc)
+                  8000f0a0    000002a0                   : _printfi.obj (.text:__pconv_e)
+                  8000f340    00000280                   : memory.obj (.text:_free)
+                  8000f5c0    00000240                   : frcdivd.obj (.text:__frcdivd)
+                  8000f800    00000240                   : fread.obj (.text:_fread)
+                  8000fa40    00000220                   : imath64.obj (.text:__divull)
+                  8000fc60    00000220                   : _printfi.obj (.text:__pproc_diouxp)
+                  8000fe80    00000220                   : _printfi.obj (.text:__pproc_str)
+                  800100a0    00000200                   : frcaddd.obj (.text:__frcaddd)
+                  800102a0    000001e0                   : _printfi.obj (.text:__mcpy)
+                  80010480    000001c0                   : divd.obj (.text:__divd)
+                  80010640    000001c0                   : fopen.obj (.text:__openfile)
+                  80010800    000001a0                   : trgdrv.obj (.text:_HOSTrename)
+                  800109a0    000001a0                   : imath40.obj (.text:__divul)
+                  80010b40    000001a0                   : mpyd.obj (.text:__mpyd)
+                  80010ce0    000001a0                   : setvbuf.obj (.text:_setvbuf)
+                  80010e80    00000180                   : memory.obj (.text:_malloc)
+                  80011000    00000180                   : lowlev.obj (.text:_open)
+                  80011180    00000160                   : addd.obj (.text:__addd)
+                  800112e0    00000160                   : _printfi.obj (.text:__pconv_g)
+                  80011440    00000160                   : _printfi.obj (.text:__pproc_fge)
+                  800115a0    00000140                   : fputc.obj (.text:_fputc)
+                  800116e0    00000120                   : _bufread.obj (.text:__buff_read)
+                  80011800    00000120                   : _printfi.obj (.text:__pproc_fflags)
+                  80011920    00000120                   : fopen.obj (.text:__search_fp)
+                  80011a40    00000120                   : fclose.obj (.text:_fclose)
+                  80011b60    00000100                   : trgdrv.obj (.text:_HOSTopen)
+                  80011c60    00000100                   : frcmpyd.obj (.text:__frcmpyd)
+                  80011d60    00000100                   : _printfi.obj (.text:__ltostr)
+                  80011e60    00000100                   : atoi.obj (.text:_atoi)
+                  80011f60    00000100                   : exit.obj (.text:_exit)
+                  80012060    00000100                   : lowlev.obj (.text:_getdevice)
+                  80012160    000000e0                   : trgdrv.obj (.text:_HOSTlseek)
+                  80012240    000000e0                   : autoinit.obj (.text:__auto_init)
+                  80012320    000000e0                   : _printfi.obj (.text:__div)
+                  80012400    000000e0                   : divi.obj (.text:__divi)
+                  800124e0    000000e0                   : fltllid.obj (.text:__fltllid)
+                  800125c0    000000e0                   : _io_perm.obj (.text:__wrt_ok)
+                  800126a0    000000e0                   : lowlev.obj (.text:_close)
+                  80012780    000000e0                   : fseek.obj (.text:_fseek)
+                  80012860    000000e0                   : memset.obj (.text:_memset)
+                  80012940    000000c0                   : trgdrv.obj (.text:_HOSTread)
+                  80012a00    000000c0                   : trgdrv.obj (.text:_HOSTunlink)
+                  80012ac0    000000c0                   : trgdrv.obj (.text:_HOSTwrite)
+                  80012b80    000000c0                   : fopen.obj (.text:__cleanup)
+                  80012c40    000000c0                   : divu.obj (.text:__divu)
+                  80012d00    000000c0                   : _printfi.obj (.text:__pconv_f)
+                  80012dc0    000000c0                   : remi.obj (.text:__remi)
+                  80012e80    000000c0                   : lowlev.obj (.text:_lseek)
+                  80012f40    000000c0                   : ltoa.obj (.text:_ltoa)
+                  80013000    000000c0                   : lowlev.obj (.text:_read)
+                  800130c0    000000c0                   : lowlev.obj (.text:_write)
+                  80013180    000000a0                   : trgdrv.obj (.text:_HOSTclose)
+                  80013220    000000a0                   : imath40.obj (.text:__divli)
+                  800132c0    000000a0                   : fflush.obj (.text:__doflush)
+                  80013360    000000a0                   : _printfi.obj (.text:__ecpy)
+                  80013400    000000a0                   : fixdli.obj (.text:__fixdli)
+                  800134a0    000000a0                   : fltlid.obj (.text:__fltlid)
+                  80013540    000000a0                   : _io_perm.obj (.text:__rd_ok)
+                  800135e0    000000a0                   : lowlev.obj (.text:_finddevice)
+                  80013680    000000a0                   : memcpy64.obj (.text:_memcpy)
+                  80013720    000000a0                   : memory.obj (.text:_minsert)
+                  800137c0    000000a0                   : memory.obj (.text:_mremove)
+                  80013860    000000a0                   : renormd.obj (.text:_renormd)
+                  80013900    000000a0                   : lowlev.obj (.text:_tabinit)
+                  800139a0    000000a0                   : trgmsg.obj (.text:_writemsg)
+                  80013a40    00000080                   : cmpd.obj (.text:__cmpd)
+                  80013ac0    00000080                   : fixdi.obj (.text:__fixdi)
+                  80013b40    00000080                   : llshift.obj (.text:__llshl)
+                  80013bc0    00000080                   : fprintf.obj (.text:_fprintf)
+                  80013c40    00000080                   : printf.obj (.text:_printf)
+                  80013cc0    00000080                   : trgmsg.obj (.text:_readmsg)
+                  80013d40    00000080                   : lowlev.obj (.text:_unlink)
+                  80013dc0    00000060                   : llshift.obj (.text:__llshr)
+                  80013e20    00000060                   : imath64.obj (.text:__subcull)
+                  80013e80    00000060                   : boot.obj (.text:_c_int00)
+                  80013ee0    00000060                   : memory.obj (.text:_calloc)
+                  80013f40    00000060                   : fopen.obj (.text:_fopen)
+                  80013fa0    00000060                   : memccpy.obj (.text:_memccpy)
+                  80014000    00000060                   : memmov.obj (.text:_memmove)
+                  80014060    00000040                   : args_main.obj (.text:__args_main)
+                  800140a0    00000040                   : fltud.obj (.text:__fltud)
+                  800140e0    00000040                   : llshift.obj (.text:__llshru)
+                  80014120    00000040                   : negd.obj (.text:__negd)
+                  80014160    00000040                   : imath40.obj (.text:__remli)
+                  800141a0    00000040                   : strasg.obj (.text:__strasgi_64plus)
+                  800141e0    00000040                   : subd.obj (.text:__subd)
+                  80014220    00000020                   : negll.obj (.text:__negll)
+                  80014240    00000020                   : _lock.obj (.text:__nop)
+                  80014260    00000020                   : printf.obj (.text:__outc)
+                  80014280    00000020                   : fprintf.obj (.text:__outc)
+                  800142a0    00000020                   : fprintf.obj (.text:__outs)
+                  800142c0    00000020                   : printf.obj (.text:__outs)
+                  800142e0    00000020                   : exit.obj (.text:_abort)
+                  80014300    00000020                   : remove.obj (.text:_remove)
+
+.stack     0    80014320    00100000     UNINITIALIZED
+                  80014320    00000008     rts64plus.lib : boot.obj (.stack)
+
+.bss       0    80114320    00000028     UNINITIALIZED
+                  80114320    00000028     dump_video.obj (.bss)
+
+.cinit     0    80114348    000001f4     
+                  80114348    0000007c     dump_video.obj (.cinit)
+                  801143c4    00000004     --HOLE-- [fill = 0]
+                  801143c8    0000005c     rts64plus.lib : lowlev.obj (.cinit)
+                  80114424    00000004     --HOLE-- [fill = 0]
+                  80114428    0000005c                   : defs.obj (.cinit)
+                  80114484    00000004     --HOLE-- [fill = 0]
+                  80114488    0000002c                   : memory.obj (.cinit)
+                  801144b4    00000004     --HOLE-- [fill = 0]
+                  801144b8    0000002c                   : exit.obj (.cinit)
+                  801144e4    00000004     --HOLE-- [fill = 0]
+                  801144e8    00000020     theora-DM6446.lib : quant.obj (.cinit)
+                  80114508    0000001c     rts64plus.lib : _lock.obj (.cinit)
+                  80114524    00000004     --HOLE-- [fill = 0]
+                  80114528    0000000c                   : fopen.obj (.cinit)
+                  80114534    00000008     --HOLE-- [fill = 0]
+
+.cio       0    80114540    00000120     UNINITIALIZED
+                  80114540    00000120     rts64plus.lib : trgmsg.obj (.cio)
+
+.const     0    80114660    00001042     
+                  80114660    00000574     theora-DM6446.lib : internal.obj (.const)
+                  80114bd4    00000002     rts64plus.lib : fputs.obj (.const)
+                  80114bd6    00000002     --HOLE-- [fill = 0]
+                  80114bd8    00000405     ogg-DM6446.lib : framing.obj (.const)
+                  80114fdd    00000003     --HOLE-- [fill = 0]
+                  80114fe0    00000290     theora-DM6446.lib : decode.obj (.const)
+                  80115270    000001a0                       : fragment.obj (.const)
+                  80115410    00000101     rts64plus.lib : ctype.obj (.const)
+                  80115511    00000003     --HOLE-- [fill = 0]
+                  80115514    000000c4     dump_video.obj (.const)
+                  801155d8    00000090     theora-DM6446.lib : state.obj (.const)
+                  80115668    00000010                       : decapiwrapper.obj (.const)
+                  80115678    00000007                       : decinfo.obj (.const)
+                  8011567f    00000023     rts64plus.lib : _printfi.obj (.const)
+
+.switch    0    801156a4    00000044     
+                  801156a4    00000034     theora-DM6446.lib : decode.obj (.switch)
+                  801156d8    00000010     rts64plus.lib : frcdivd.obj (.switch)
+
+.far       0    801156e8    001d53d8     UNINITIALIZED
+                  801156e8    001d4ff0     dump_video.obj (.far)
+                  802ea6d8    00000194     rts64plus.lib : defs.obj (.far)
+                  802ea86c    00000004                   : fopen.obj (.far)
+                  802ea870    000000d0                   : trgdrv.obj (.far)
+                  802ea940    000000cc                   : lowlev.obj (.far)
+                  802eaa10    00000090                   : exit.obj (.far)
+                  802eaaa0    00000010     theora-DM6446.lib : quant.obj (.far)
+                  802eaab0    00000008     rts64plus.lib : memory.obj (.far)
+                  802eaab8    00000008                   : _lock.obj (.far)
+
+.sysmem    0    82000000    00800000     UNINITIALIZED
+                  82000000    00000008     rts64plus.lib : memory.obj (.sysmem)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80114320   $bss
+80114320   .bss
+80000000   .data
+80000000   .text
+800142e0   C$$EXIT
+80013a24   C$$IO$$
+80013180   _HOSTclose
+80012160   _HOSTlseek
+80011b60   _HOSTopen
+80012940   _HOSTread
+80010800   _HOSTrename
+80012a00   _HOSTunlink
+80012ac0   _HOSTwrite
+802eaaa8   _OC_AC_QUANT_MIN
+80114a60   _OC_DCT_TOKEN_EXTRA_BITS
+802eaaa0   _OC_DC_QUANT_MIN
+80114960   _OC_FRAME_FOR_MODE
+80114660   _OC_FZIG_ZAG
+80114860   _OC_IZIG_ZAG
+80114980   _OC_MB_MAP
+80114990   _OC_MB_MAP_IDXS
+80114a50   _OC_MB_MAP_NIDXS
+80114b60   _OC_SET_CHROMA_MVS_TABLE
+80114540   __CIOBUF_
+00100000   __STACK_SIZE
+00800000   __SYSMEM_SIZE
+ffffffff   ___binit__
+80114320   ___bss__
+ffffffff   ___c_args__
+80114348   ___cinit__
+80000000   ___data__
+80000000   ___edata__
+80114348   ___end__
+80014320   ___etext__
+ffffffff   ___pinit__
+80000000   ___text__
+80011180   __addd
+80014060   __args_main
+80012240   __auto_init
+800116e0   __buff_read
+80012b80   __cleanup
+802eaa98   __cleanup_ptr
+80013a40   __cmpd
+80115410   __ctypes_
+80010480   __divd
+80012400   __divi
+80013220   __divli
+80012c40   __divu
+800109a0   __divul
+8000fa40   __divull
+800132c0   __doflush
+802eaa9c   __dtors_ptr
+80013ac0   __fixdi
+80013400   __fixdli
+800134a0   __fltlid
+800124e0   __fltllid
+800140a0   __fltud
+800100a0   __frcaddd
+8000f5c0   __frcdivd
+80011c60   __frcmpyd
+802ea868   __ft_end
+802ea6d8   __ftable
+80013b40   __llshl
+80013dc0   __llshr
+800140e0   __llshru
+802eaab8   __lock
+80010b40   __mpyd
+80014120   __negd
+80014220   __negll
+80014240   __nop
+8000d860   __printfi
+80013540   __rd_ok
+80012dc0   __remi
+80014160   __remli
+80014320   __stack
+800141a0   __strasgi_64plus
+80013e20   __subcull
+800141e0   __subd
+82000000   __sys_memory
+802ea7c8   __tmpnams
+802eaabc   __unlock
+800125c0   __wrt_ok
+800142e0   _abort
+80011e60   _atoi
+80009900   _buffer_data
+80013e80   _c_int00
+80013ee0   _calloc
+800126a0   _close
+80011f60   _exit
+80011a40   _fclose
+80013f40   _fopen
+80013bc0   _fprintf
+800115a0   _fputc
+8000e500   _fputs
+8000f800   _fread
+8000f340   _free
+80012780   _fseek
+80114344   _got_sigint
+80012e80   _lseek
+80012f40   _ltoa
+80009acc   _main
+80010e80   _malloc
+80013fa0   _memccpy
+80013680   _memcpy
+80014000   _memmove
+80012860   _memset
+8000d4a0   _oc_calloc_2d
+8000d480   _oc_dct_token_skip
+8000c120   _oc_dequant_tables_init
+8000ae2c   _oc_frag_pred_dc
+8000ae04   _oc_frag_recon_inter
+8000adc8   _oc_frag_recon_inter2
+8000ac8c   _oc_frag_recon_inter2_c
+8000ab0c   _oc_frag_recon_inter_c
+8000aaec   _oc_frag_recon_intra
+8000a960   _oc_frag_recon_intra_c
+8000d470   _oc_free_2d
+8000a8c0   _oc_huff_token_decode
+8000a738   _oc_huff_trees_clear
+8000a6ac   _oc_huff_trees_copy
+8000a564   _oc_huff_trees_unpack
+8000b5a0   _oc_idct8x8_10_c
+8000b1cc   _oc_idct8x8_c
+8000d458   _oc_ilog
+8000d3f8   _oc_malloc_2d
+8000baf4   _oc_quant_params_clear
+8000b6e0   _oc_quant_params_unpack
+80006120   _oc_restore_fpu
+80005cc0   _oc_restore_fpu_c
+800077ec   _oc_state_borders_fill
+800076c0   _oc_state_borders_fill_caps
+800075e0   _oc_state_borders_fill_rows
+80007578   _oc_state_clear
+80006f24   _oc_state_fill_buffer_ptrs
+80007564   _oc_state_frag_copy
+80005d84   _oc_state_frag_copy_c
+80007544   _oc_state_frag_recon
+80006134   _oc_state_frag_recon_c
+80005cc4   _oc_state_get_mv_offsets
+80007314   _oc_state_init
+80006418   _oc_state_loop_filter_frag_rows
+80005ac8   _oc_state_loop_filter_frag_rows_c
+800057f4   _oc_state_loop_filter_init
+800057b4   _oc_state_mbi_for_pos
+80005758   _oc_state_vtable_init
+80005758   _oc_state_vtable_init_c
+8000d024   _oc_theora_info2th_info
+8000d220   _oc_ycbcr_buffer_flip
+80115708   _og
+80008fd0   _ogg_packet_clear
+80008390   _ogg_page_bos
+80007894   _ogg_page_checksum_set
+80008380   _ogg_page_continued
+800083a4   _ogg_page_eos
+800083b8   _ogg_page_granulepos
+80008fa0   _ogg_page_packets
+800084ac   _ogg_page_pageno
+80008474   _ogg_page_serialno
+80008370   _ogg_page_version
+80008ef4   _ogg_stream_clear
+80008f6c   _ogg_stream_destroy
+80008eec   _ogg_stream_eos
+80007ee0   _ogg_stream_flush
+80008e50   _ogg_stream_init
+80008c2c   _ogg_stream_packetin
+80008c20   _ogg_stream_packetout
+80008c10   _ogg_stream_packetpeek
+800085d8   _ogg_stream_pagein
+800082e4   _ogg_stream_pageout
+80007e64   _ogg_stream_reset
+80007eb8   _ogg_stream_reset_serialno
+80007d94   _ogg_sync_buffer
+80007d18   _ogg_sync_clear
+80007d60   _ogg_sync_destroy
+80007cf8   _ogg_sync_init
+80007c98   _ogg_sync_pageout
+800079dc   _ogg_sync_pageseek
+80007884   _ogg_sync_reset
+80007860   _ogg_sync_wrote
+80011000   _open
+80115ad8   _outbuffer
+80114340   _outfile
+801156e8   _oy
+80114320   _pos
+80013c40   _printf
+800115a0   _putc
+80013000   _read
+80013cc0   _readmsg
+8000edc0   _realloc
+80014300   _remove
+80013860   _renormd
+80010ce0   _setvbuf
+80114328   _stateflag
+80115ab0   _tc
+80115ac0   _td
+8000bf40   _th_comment_add
+8000c02c   _th_comment_add_tag
+8000bec0   _th_comment_clear
+8000beac   _th_comment_init
+8000bdec   _th_comment_query
+8000bd58   _th_comment_query_count
+80005510   _th_decode_alloc
+800050e0   _th_decode_ctl
+80005060   _th_decode_free
+80009880   _th_decode_headerin
+80004960   _th_decode_packetin
+80000000   _th_decode_ycbcr_out
+800055a0   _th_granule_frame
+800056c8   _th_granule_time
+8000bcc4   _th_info_clear
+8000bc80   _th_info_init
+8000d1f8   _th_packet_isheader
+8000d1b8   _th_packet_iskeyframe
+80009020   _th_setup_free
+8000d1ac   _th_version_number
+8000d1a0   _th_version_string
+8000cfb4   _theora_clear
+8000cfa8   _theora_comment_add
+8000cf98   _theora_comment_add_tag
+8000cf8c   _theora_comment_clear
+8000cf80   _theora_comment_init
+8000cf70   _theora_comment_query
+8000cf64   _theora_comment_query_count
+8000cf24   _theora_control
+8000c8c4   _theora_decode_YUVout
+8000c684   _theora_decode_header
+8000c5cc   _theora_decode_init
+8000c580   _theora_decode_packetin
+8000ced8   _theora_granule_frame
+8000cec4   _theora_granule_shift
+8000ce74   _theora_granule_time
+8000ce28   _theora_info_clear
+8000ce14   _theora_info_init
+80114324   _theora_p
+8000ce08   _theora_packet_isheader
+8000cdf8   _theora_packet_iskeyframe
+8000cdec   _theora_version_number
+8000cde0   _theora_version_string
+8000dec8   _theorapackB_adv1
+8000deb0   _theorapackB_bits
+8000de90   _theorapackB_bytes
+8000de8c   _theorapackB_get_buffer
+8000de34   _theorapackB_look1
+8000dcb0   _theorapackB_read
+8000dc14   _theorapackB_read1
+8000dbd8   _theorapackB_readinit
+8000dbc0   _theorapackB_reset
+80115a48   _ti
+801158b8   _to
+80013d40   _unlink
+80114330   _videobuf_granulepos
+8011432c   _videobuf_ready
+80114338   _videobuf_time
+80115728   _vo
+800130c0   _write
+800139a0   _writemsg
+ffffffff   binit
+80114348   cinit
+80000000   edata
+80114348   end
+80014320   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00100000   __STACK_SIZE
+00800000   __SYSMEM_SIZE
+80000000   .data
+80000000   .text
+80000000   ___data__
+80000000   ___edata__
+80000000   ___text__
+80000000   _th_decode_ycbcr_out
+80000000   edata
+80004960   _th_decode_packetin
+80005060   _th_decode_free
+800050e0   _th_decode_ctl
+80005510   _th_decode_alloc
+800055a0   _th_granule_frame
+800056c8   _th_granule_time
+80005758   _oc_state_vtable_init
+80005758   _oc_state_vtable_init_c
+800057b4   _oc_state_mbi_for_pos
+800057f4   _oc_state_loop_filter_init
+80005ac8   _oc_state_loop_filter_frag_rows_c
+80005cc0   _oc_restore_fpu_c
+80005cc4   _oc_state_get_mv_offsets
+80005d84   _oc_state_frag_copy_c
+80006120   _oc_restore_fpu
+80006134   _oc_state_frag_recon_c
+80006418   _oc_state_loop_filter_frag_rows
+80006f24   _oc_state_fill_buffer_ptrs
+80007314   _oc_state_init
+80007544   _oc_state_frag_recon
+80007564   _oc_state_frag_copy
+80007578   _oc_state_clear
+800075e0   _oc_state_borders_fill_rows
+800076c0   _oc_state_borders_fill_caps
+800077ec   _oc_state_borders_fill
+80007860   _ogg_sync_wrote
+80007884   _ogg_sync_reset
+80007894   _ogg_page_checksum_set
+800079dc   _ogg_sync_pageseek
+80007c98   _ogg_sync_pageout
+80007cf8   _ogg_sync_init
+80007d18   _ogg_sync_clear
+80007d60   _ogg_sync_destroy
+80007d94   _ogg_sync_buffer
+80007e64   _ogg_stream_reset
+80007eb8   _ogg_stream_reset_serialno
+80007ee0   _ogg_stream_flush
+800082e4   _ogg_stream_pageout
+80008370   _ogg_page_version
+80008380   _ogg_page_continued
+80008390   _ogg_page_bos
+800083a4   _ogg_page_eos
+800083b8   _ogg_page_granulepos
+80008474   _ogg_page_serialno
+800084ac   _ogg_page_pageno
+800085d8   _ogg_stream_pagein
+80008c10   _ogg_stream_packetpeek
+80008c20   _ogg_stream_packetout
+80008c2c   _ogg_stream_packetin
+80008e50   _ogg_stream_init
+80008eec   _ogg_stream_eos
+80008ef4   _ogg_stream_clear
+80008f6c   _ogg_stream_destroy
+80008fa0   _ogg_page_packets
+80008fd0   _ogg_packet_clear
+80009020   _th_setup_free
+80009880   _th_decode_headerin
+80009900   _buffer_data
+80009acc   _main
+8000a564   _oc_huff_trees_unpack
+8000a6ac   _oc_huff_trees_copy
+8000a738   _oc_huff_trees_clear
+8000a8c0   _oc_huff_token_decode
+8000a960   _oc_frag_recon_intra_c
+8000aaec   _oc_frag_recon_intra
+8000ab0c   _oc_frag_recon_inter_c
+8000ac8c   _oc_frag_recon_inter2_c
+8000adc8   _oc_frag_recon_inter2
+8000ae04   _oc_frag_recon_inter
+8000ae2c   _oc_frag_pred_dc
+8000b1cc   _oc_idct8x8_c
+8000b5a0   _oc_idct8x8_10_c
+8000b6e0   _oc_quant_params_unpack
+8000baf4   _oc_quant_params_clear
+8000bc80   _th_info_init
+8000bcc4   _th_info_clear
+8000bd58   _th_comment_query_count
+8000bdec   _th_comment_query
+8000beac   _th_comment_init
+8000bec0   _th_comment_clear
+8000bf40   _th_comment_add
+8000c02c   _th_comment_add_tag
+8000c120   _oc_dequant_tables_init
+8000c580   _theora_decode_packetin
+8000c5cc   _theora_decode_init
+8000c684   _theora_decode_header
+8000c8c4   _theora_decode_YUVout
+8000cde0   _theora_version_string
+8000cdec   _theora_version_number
+8000cdf8   _theora_packet_iskeyframe
+8000ce08   _theora_packet_isheader
+8000ce14   _theora_info_init
+8000ce28   _theora_info_clear
+8000ce74   _theora_granule_time
+8000cec4   _theora_granule_shift
+8000ced8   _theora_granule_frame
+8000cf24   _theora_control
+8000cf64   _theora_comment_query_count
+8000cf70   _theora_comment_query
+8000cf80   _theora_comment_init
+8000cf8c   _theora_comment_clear
+8000cf98   _theora_comment_add_tag
+8000cfa8   _theora_comment_add
+8000cfb4   _theora_clear
+8000d024   _oc_theora_info2th_info
+8000d1a0   _th_version_string
+8000d1ac   _th_version_number
+8000d1b8   _th_packet_iskeyframe
+8000d1f8   _th_packet_isheader
+8000d220   _oc_ycbcr_buffer_flip
+8000d3f8   _oc_malloc_2d
+8000d458   _oc_ilog
+8000d470   _oc_free_2d
+8000d480   _oc_dct_token_skip
+8000d4a0   _oc_calloc_2d
+8000d860   __printfi
+8000dbc0   _theorapackB_reset
+8000dbd8   _theorapackB_readinit
+8000dc14   _theorapackB_read1
+8000dcb0   _theorapackB_read
+8000de34   _theorapackB_look1
+8000de8c   _theorapackB_get_buffer
+8000de90   _theorapackB_bytes
+8000deb0   _theorapackB_bits
+8000dec8   _theorapackB_adv1
+8000e500   _fputs
+8000edc0   _realloc
+8000f340   _free
+8000f5c0   __frcdivd
+8000f800   _fread
+8000fa40   __divull
+800100a0   __frcaddd
+80010480   __divd
+80010800   _HOSTrename
+800109a0   __divul
+80010b40   __mpyd
+80010ce0   _setvbuf
+80010e80   _malloc
+80011000   _open
+80011180   __addd
+800115a0   _fputc
+800115a0   _putc
+800116e0   __buff_read
+80011a40   _fclose
+80011b60   _HOSTopen
+80011c60   __frcmpyd
+80011e60   _atoi
+80011f60   _exit
+80012160   _HOSTlseek
+80012240   __auto_init
+80012400   __divi
+800124e0   __fltllid
+800125c0   __wrt_ok
+800126a0   _close
+80012780   _fseek
+80012860   _memset
+80012940   _HOSTread
+80012a00   _HOSTunlink
+80012ac0   _HOSTwrite
+80012b80   __cleanup
+80012c40   __divu
+80012dc0   __remi
+80012e80   _lseek
+80012f40   _ltoa
+80013000   _read
+800130c0   _write
+80013180   _HOSTclose
+80013220   __divli
+800132c0   __doflush
+80013400   __fixdli
+800134a0   __fltlid
+80013540   __rd_ok
+80013680   _memcpy
+80013860   _renormd
+800139a0   _writemsg
+80013a24   C$$IO$$
+80013a40   __cmpd
+80013ac0   __fixdi
+80013b40   __llshl
+80013bc0   _fprintf
+80013c40   _printf
+80013cc0   _readmsg
+80013d40   _unlink
+80013dc0   __llshr
+80013e20   __subcull
+80013e80   _c_int00
+80013ee0   _calloc
+80013f40   _fopen
+80013fa0   _memccpy
+80014000   _memmove
+80014060   __args_main
+800140a0   __fltud
+800140e0   __llshru
+80014120   __negd
+80014160   __remli
+800141a0   __strasgi_64plus
+800141e0   __subd
+80014220   __negll
+80014240   __nop
+800142e0   C$$EXIT
+800142e0   _abort
+80014300   _remove
+80014320   ___etext__
+80014320   __stack
+80014320   etext
+80114320   $bss
+80114320   .bss
+80114320   ___bss__
+80114320   _pos
+80114324   _theora_p
+80114328   _stateflag
+8011432c   _videobuf_ready
+80114330   _videobuf_granulepos
+80114338   _videobuf_time
+80114340   _outfile
+80114344   _got_sigint
+80114348   ___cinit__
+80114348   ___end__
+80114348   cinit
+80114348   end
+80114540   __CIOBUF_
+80114660   _OC_FZIG_ZAG
+80114860   _OC_IZIG_ZAG
+80114960   _OC_FRAME_FOR_MODE
+80114980   _OC_MB_MAP
+80114990   _OC_MB_MAP_IDXS
+80114a50   _OC_MB_MAP_NIDXS
+80114a60   _OC_DCT_TOKEN_EXTRA_BITS
+80114b60   _OC_SET_CHROMA_MVS_TABLE
+80115410   __ctypes_
+801156e8   _oy
+80115708   _og
+80115728   _vo
+801158b8   _to
+80115a48   _ti
+80115ab0   _tc
+80115ac0   _td
+80115ad8   _outbuffer
+802ea6d8   __ftable
+802ea7c8   __tmpnams
+802ea868   __ft_end
+802eaa98   __cleanup_ptr
+802eaa9c   __dtors_ptr
+802eaaa0   _OC_DC_QUANT_MIN
+802eaaa8   _OC_AC_QUANT_MIN
+802eaab8   __lock
+802eaabc   __unlock
+82000000   __sys_memory
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[262 symbols]

@@ -1,0 +1,100 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.3\MyProjects\test_libtheora\"
+ProjectType=Executable
+CPUFamily=TMS320C64XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Project Dependencies]
+Source="..\theora-DM6446\theora-DM6446.pjt"
+
+["..\theora-DM6446\theora-DM6446.pjt" Settings]
+MatchConfigName=true
+
+[Source Files]
+Source="..\..\bin\utilities\sim\gcc\include\sys\fcntl.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\file.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\locking.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\param.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\time.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\timeb.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\unistd.h"
+Source="..\..\bin\utilities\sim\gcc\include\sys\utime.h"
+Source="..\ogg-DM6446\Debug\ogg-DM6446.lib"
+Source="..\theora-DM6446\Debug\theora-DM6446.lib"
+Source="..\vorbis-DM6446\Debug\vorbis-DM6446.lib"
+Source="dump_video.c"
+Source="lnk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -i"C:\CCStudio_v3.3\C6000\cgtools\include" -d"_DEBUG" -mv6400+
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
+
+["Linker" Settings: "Debug"]
+Options=-a -c -heap0x800000 -m".\Debug\theora-DM6446.map" -o".\Debug\test_theora-DM6446.out" -stack0x100000 -w -x -i"C:\CCStudio_v3.3\C6000\cgtools\lib" -l"rts64plus.lib" --default_order
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\test_libtheora.map" -o".\Release\test_libtheora.out" -w -x
+
+["..\..\bin\utilities\sim\gcc\include\sys\fcntl.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\fcntl.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\file.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\file.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\locking.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\locking.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\param.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\param.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\time.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\time.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\timeb.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\timeb.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\unistd.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\unistd.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\utime.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\bin\utilities\sim\gcc\include\sys\utime.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["lnk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["lnk.cmd" Settings: "Release"]
+LinkOrder=1
+

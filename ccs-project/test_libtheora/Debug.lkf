@@ -1,0 +1,7 @@
+-z -a -c -heap0x800000 -m"./Debug/theora-DM6446.map" -o"./Debug/test_theora-DM6446.out" -stack0x100000 -w -x -i"C:/CCStudio_v3.3/C6000/csl/lib" -i"C:/CCStudio_v3.3/C6000/xdais/lib" -i"C:/CCStudio_v3.3/bios_5_31_02/packages/ti/bios/lib" -i"C:/CCStudio_v3.3/bios_5_31_02/packages/ti/rtdx/lib/c6000" -i"C:/CCStudio_v3.3/C6000/cgtools/lib" -l"rts64plus.lib" --default_order
+"C:\CCStudio_v3.3\MyProjects\test_libtheora\lnk.cmd"
+"C:\CCStudio_v3.3\MyProjects\test_libtheora\Debug\dump_video.obj"
+"C:\CCStudio_v3.3\MyProjects\ogg-DM6446\Debug\ogg-DM6446.lib"
+"C:\CCStudio_v3.3\MyProjects\theora-DM6446\Debug\theora-DM6446.lib"
+"C:\CCStudio_v3.3\MyProjects\theora-DM6446\Debug\theora-DM6446.lib"
+"C:\CCStudio_v3.3\MyProjects\vorbis-DM6446\Debug\vorbis-DM6446.lib"

@@ -1,3 +1,113 @@
 -------------------------  theora-DM6446.pjt - Debug  -------------------------
+[apiwrapper.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "apiwrapper.c"
+
+[bitwise.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "bitwise.c"
+
+[blockmap.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "blockmap.c"
+
+[cpu.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "cpu.c"
+
+[dct.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dct.c"
+
+[dct_decode.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dct_decode.c"
+"dct_decode.c", line 724: warning: variable "ToFragment" was set but never used
+"dct_decode.c", line 1067: warning: variable "ToFragment" was set but never used
+
+[dct_decode_mmx.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dct_decode_mmx.c"
+
+[dct_encode.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dct_encode.c"
+"dct_encode.c", line 288: warning: variable "MvShift" was set but never used
+"dct_encode.c", line 289: warning: variable "MvModMask" was set but never used
+"dct_encode.c", line 374: warning: variable "LeftEdge" was set but never used
+
+[decapiwrapper.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "decapiwrapper.c"
+
+[decinfo.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "decinfo.c"
+"decinfo.c", line 214: warning: statement is unreachable
+
+[decode.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "decode.c"
+"decode.c", line 541: warning: variable "j" was set but never used
+"decode.c", line 2035: warning: statement is unreachable
+"decode.c", line 2044: warning: statement is unreachable
+"decode.c", line 2057: warning: statement is unreachable
+"decode.c", line 2066: warning: statement is unreachable
+
+[dequant.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dequant.c"
+
+[dsp.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dsp.c"
+
+[dsp_mmx.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dsp_mmx.c"
+
+[dsp_mmxext.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "dsp_mmxext.c"
+
+[encapiwrapper.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encapiwrapper.c"
+"encapiwrapper.c", line 78: warning: variable "enc" is used before its value is set
+"encapiwrapper.c", line 138: warning: statement is unreachable
+"encapiwrapper.c", line 157: warning: statement is unreachable
+"encapiwrapper.c", line 161: warning: statement is unreachable
+
+[encode.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encode.c"
+"encode.c", line 752: warning: variable "ToFragment" was set but never used
+"encode.c", line 1003: warning: enumerated type mixed with another type
+"encode.c", line 1011: warning: enumerated type mixed with another type
+"encode.c", line 1014: warning: enumerated type mixed with another type
+"encode.c", line 1039: warning: enumerated type mixed with another type
+
+[encoder_huffman.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encoder_huffman.c"
+
+[encoder_idct.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encoder_idct.c"
+
+[encoder_quant.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encoder_quant.c"
+
+[encoder_toplevel.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "encoder_toplevel.c"
+
+[fdct_mmx.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "fdct_mmx.c"
+
+[fragment.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "fragment.c"
+
+[frarray.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "frarray.c"
+
+[frinit.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "frinit.c"
+
+[huffdec.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "huffdec.c"
+
+[idct.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "idct.c"
+
+[idct_mmx.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "idct_mmx.c"
+
+[info.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "info.c"
+
+[internal.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "internal.c"
+
+[mcomp.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "mcomp.c"
+
+[misc_common.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "misc_common.c"
+
+[mmxfrag.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "mmxfrag.c"
+
+[mmxidct.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "mmxidct.c"
+
+[mmxstate.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "mmxstate.c"
+
+[pb.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "pb.c"
+
+[pp.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "pp.c"
+
+[quant.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "quant.c"
+
+[recon_mmx.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "recon_mmx.c"
+
+[reconstruct.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "reconstruct.c"
+
+[scan.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "scan.c"
+
+[state.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "state.c"
+
+[x86state.c] "C:\CCStudio_v3.3\C6000\cgtools\bin\cl6x" -g -o3 -fr"C:/CCStudio_v3.3/MyProjects/theora-DM6446/Debug" -d"_DEBUG" -mv6400+ -@"Debug.lkf" "x86state.c"
+
+[Archiving...] "C:\CCStudio_v3.3\C6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'C:\CCStudio_v3.3\MyProjects\theora-DM6446\Debug\theora-DM6446.lib'
+  ==>  building archive 'C:\CCStudio_v3.3\MyProjects\theora-DM6446\Debug\theora-DM6446.lib'
+
 Build Complete,
-  0 Errors, 0 Warnings, 0 Remarks.
+  0 Errors, 20 Warnings, 0 Remarks.

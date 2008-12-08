@@ -1,0 +1,9 @@
+/*--------------------------------------------------------------*/
+/* The StartUp() function is called each time CCS is started. */
+/* Customize this function to perform desired initialization */
+/* that will not access the target. */
+/*--------------------------------------------------------------*/
+StartUp()
+{
+	//setup_memory_map();
+}

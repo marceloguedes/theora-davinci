@@ -1,0 +1,723 @@
+******************************************************************************
+          TMS320C6x COFF Linker PC v6.0.8                      
+******************************************************************************
+>> Linked Thu Oct 09 01:31:45 2008
+
+OUTPUT FILE NAME:   <./Debug/test_libtheora.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00000000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DDR2                  80000000   01000000  000117bf  00fee841  RWIX
+  HEAP                  82000000   00800000  00000000  00800000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.cio       0    80000000    00000000     UNINITIALIZED
+
+.data      0    80000000    00000000     UNINITIALIZED
+
+.stack     0    80000000    00000000     UNINITIALIZED
+
+.text      0    80000000    00010380     
+                  80000000    00006180     theora-DM6446.lib : decode.obj (.text)
+                  80006180    00002a80                       : state.obj (.text)
+                  80008c00    00001e60     ogg-DM6446.lib : framing.obj (.text)
+                  8000aa60    00000b40     theora-DM6446.lib : idct.obj (.text)
+                  8000b5a0    000009c0                       : huffdec.obj (.text)
+                  8000bf60    000008e0                       : decinfo.obj (.text)
+                  8000c840    00000860                       : dequant.obj (.text)
+                  8000d0a0    000007a0     dump_video.obj (.text)
+                  8000d840    00000680     theora-DM6446.lib : internal.obj (.text)
+                  8000dec0    00000660                       : fragment.obj (.text)
+                  8000e520    00000640                       : quant.obj (.text)
+                  8000eb60    00000580                       : decapiwrapper.obj (.text)
+                  8000f0e0    00000560                       : bitwise.obj (.text)
+                  8000f640    00000500                       : apiwrapper.obj (.text)
+                  8000fb40    00000480                       : info.obj (.text)
+                  8000ffc0    00000020     (.T$000a)
+                  8000ffe0    00000020     (.T$0005)
+                  80010000    00000020     (.T$0007)
+                  80010020    00000020     (.T$0016)
+                  80010040    00000020     (.T$0001)
+                  80010060    00000020     (.T$000d)
+                  80010080    00000020     (.T$0010)
+                  800100a0    00000020     (.T$000f)
+                  800100c0    00000020     (.T$001a)
+                  800100e0    00000020     (.T$0008)
+                  80010100    00000020     (.T$0002)
+                  80010120    00000020     (.T$0011)
+                  80010140    00000020     (.T$0019)
+                  80010160    00000020     (.T$001d)
+                  80010180    00000020     (.T$0017)
+                  800101a0    00000020     (.T$0018)
+                  800101c0    00000020     (.T$0006)
+                  800101e0    00000020     (.T$0003)
+                  80010200    00000020     (.T$0009)
+                  80010220    00000020     (.T$001b)
+                  80010240    00000020     (.T$0000)
+                  80010260    00000020     (.T$0014)
+                  80010280    00000020     (.T$000c)
+                  800102a0    00000020     (.T$0012)
+                  800102c0    00000020     (.T$000e)
+                  800102e0    00000020     (.T$0004)
+                  80010300    00000020     (.T$0015)
+                  80010320    00000020     (.T$001c)
+                  80010340    00000020     (.T$0013)
+                  80010360    00000020     (.T$000b)
+
+.const     0    80010380    00000f4f     
+                  80010380    00000574     theora-DM6446.lib : internal.obj (.const)
+                  800108f4    00000004     --HOLE-- [fill = 0]
+                  800108f8    00000405     ogg-DM6446.lib : framing.obj (.const)
+                  80010cfd    00000003     --HOLE-- [fill = 0]
+                  80010d00    00000290     theora-DM6446.lib : decode.obj (.const)
+                  80010f90    000001a0                       : fragment.obj (.const)
+                  80011130    000000f1     dump_video.obj (.const)
+                  80011221    00000007     --HOLE-- [fill = 0]
+                  80011228    00000090     theora-DM6446.lib : state.obj (.const)
+                  800112b8    00000010                       : decapiwrapper.obj (.const)
+                  800112c8    00000007                       : decinfo.obj (.const)
+
+.far       0    800112d0    00000400     UNINITIALIZED
+                  800112d0    000003f0     dump_video.obj (.far)
+                  800116c0    00000010     theora-DM6446.lib : quant.obj (.far)
+
+.cinit     0    800116d0    00000094     
+                  800116d0    0000006c     dump_video.obj (.cinit)
+                  8001173c    00000004     --HOLE-- [fill = 0]
+                  80011740    00000020     theora-DM6446.lib : quant.obj (.cinit)
+                  80011760    00000004     --HOLE-- [fill = 0]
+
+.switch    0    80011764    00000034     
+                  80011764    00000034     theora-DM6446.lib : decode.obj (.switch)
+
+.bss       0    80011798    00000028     UNINITIALIZED
+                  80011798    00000028     dump_video.obj (.bss)
+
+.sysmem    0    82000000    00000000     UNINITIALIZED
+
+
+FAR CALL TRAMPOLINES
+
+callee    addr      tramp     addr      call addr  call info
+--------  --------  --------  --------  ---------  ----------------
+_fread    00000000  .T$0000   80010240  8000d0c4   dump_video.obj (.text)
+_realloc  00000000  .T$0001   80010040  80003144   theora-DM6446.lib : decode.obj (.text)
+                                        800030b8                     : decode.obj (.text)
+                                        80002fe8                     : decode.obj (.text)
+                                        80002fc8                     : decode.obj (.text)
+                                        80009cb4   ogg-DM6446.lib : framing.obj (.text)
+                                        800091b4                  : framing.obj (.text)
+                                        8000918c                  : framing.obj (.text)
+                                        800090f8                  : framing.obj (.text)
+                                        8000fc98   theora-DM6446.lib : info.obj (.text)
+                                        8000fc74                     : info.obj (.text)
+__fltllid
+          00000000  .T$0002   80010100  80008b8c                     : state.obj (.text)
+_memchr   00000000  .T$0003   800101e0  8000a014   ogg-DM6446.lib : framing.obj (.text)
+_printf   00000000  .T$0004   800102e0  8000d810   dump_video.obj (.text)
+                                        8000d44c   dump_video.obj (.text)
+_free     00000000  .T$0005   8000ffe0  8000558c   theora-DM6446.lib : decode.obj (.text)
+                                        8000554c                     : decode.obj (.text)
+                                        80002f20                     : decode.obj (.text)
+                                        80002f00                     : decode.obj (.text)
+                                        80002dcc                     : decode.obj (.text)
+                                        80002dac                     : decode.obj (.text)
+                                        80002d8c                     : decode.obj (.text)
+                                        80000600                     : decode.obj (.text)
+                                        800005ec                     : decode.obj (.text)
+                                        800005d8                     : decode.obj (.text)
+                                        8000750c                     : state.obj (.text)
+                                        80007158                     : state.obj (.text)
+                                        8000714c                     : state.obj (.text)
+                                        80007140                     : state.obj (.text)
+                                        80007130                     : state.obj (.text)
+                                        80007124                     : state.obj (.text)
+                                        8000aa38   ogg-DM6446.lib : framing.obj (.text)
+                                        80009be4                  : framing.obj (.text)
+                                        80009bb8                  : framing.obj (.text)
+                                        80009088                  : framing.obj (.text)
+                                        80009054                  : framing.obj (.text)
+                                        80009044                  : framing.obj (.text)
+                                        80009030                  : framing.obj (.text)
+                                        8000b8e4   theora-DM6446.lib : huffdec.obj (.text)
+                                        8000c824                     : decinfo.obj (.text)
+                                        8000c760                     : decinfo.obj (.text)
+                                        8000d070                     : dequant.obj (.text)
+                                        8000d044                     : dequant.obj (.text)
+                                        8000cdd0                     : dequant.obj (.text)
+                                        8000cd70                     : dequant.obj (.text)
+                                        8000ccc4                     : dequant.obj (.text)
+                                        8000dd20                     : internal.obj (.text)
+                                        8000eec0                     : decapiwrapper.obj (.text)
+                                        8000f6ac                     : apiwrapper.obj (.text)
+                                        8000ff90                     : info.obj (.text)
+                                        8000ff84                     : info.obj (.text)
+                                        8000ff78                     : info.obj (.text)
+                                        8000ff40                     : info.obj (.text)
+                                        8000fdb0                     : info.obj (.text)
+__remli   00000000  .T$0006   800101c0  800094f8   ogg-DM6446.lib : framing.obj (.text)
+_memset   00000000  .T$0007   80010000  80005938   theora-DM6446.lib : decode.obj (.text)
+                                        80004338                     : decode.obj (.text)
+                                        800034f8                     : decode.obj (.text)
+                                        80003374                     : decode.obj (.text)
+                                        80003354                     : decode.obj (.text)
+                                        80002e34                     : decode.obj (.text)
+                                        80002490                     : decode.obj (.text)
+                                        80001fac                     : decode.obj (.text)
+                                        800013c8                     : decode.obj (.text)
+                                        800086c0                     : state.obj (.text)
+                                        80007928                     : state.obj (.text)
+                                        80007914                     : state.obj (.text)
+                                        800076d4                     : state.obj (.text)
+                                        800067f8                     : state.obj (.text)
+                                        80006244                     : state.obj (.text)
+                                        8000aa40   ogg-DM6446.lib : framing.obj (.text)
+                                        80009ea4                  : framing.obj (.text)
+                                        80009b90                  : framing.obj (.text)
+                                        80009060                  : framing.obj (.text)
+                                        80008f60                  : framing.obj (.text)
+                                        8000ebc0   theora-DM6446.lib : decapiwrapper.obj (.text)
+                                        8000eb8c                     : decapiwrapper.obj (.text)
+                                        8000f144                     : bitwise.obj (.text)
+                                        8000f708                     : apiwrapper.obj (.text)
+                                        8000f688                     : apiwrapper.obj (.text)
+                                        8000f664                     : apiwrapper.obj (.text)
+                                        8000ffa0                     : info.obj (.text)
+                                        8000fc44                     : info.obj (.text)
+                                        8000fc2c                     : info.obj (.text)
+                                        8000fbe0                     : info.obj (.text)
+_memcmp   00000000  .T$0008   800100e0  80007b80                     : state.obj (.text)
+                                        80009ef8   ogg-DM6446.lib : framing.obj (.text)
+                                        80009db8                  : framing.obj (.text)
+                                        8000c654   theora-DM6446.lib : decinfo.obj (.text)
+                                        8000ea44                     : quant.obj (.text)
+__remi    00000000  .T$0009   80010200  8000ce44                     : dequant.obj (.text)
+                                        8000ce18                     : dequant.obj (.text)
+                                        8000cb90                     : dequant.obj (.text)
+                                        8000cb60                     : dequant.obj (.text)
+                                        8000ca94                     : dequant.obj (.text)
+_memcpy   00000000  .T$000a   8000ffc0  800045d4                     : decode.obj (.text)
+                                        800043b0                     : decode.obj (.text)
+                                        80000554                     : decode.obj (.text)
+                                        80007aa4                     : state.obj (.text)
+                                        80007a84                     : state.obj (.text)
+                                        8000a4ec   ogg-DM6446.lib : framing.obj (.text)
+                                        80009450                  : framing.obj (.text)
+                                        8000cd98   theora-DM6446.lib : dequant.obj (.text)
+                                        8000cd10                     : dequant.obj (.text)
+                                        8000d398   dump_video.obj (.text)
+                                        8000eb14   theora-DM6446.lib : quant.obj (.text)
+                                        8000e5a0                     : quant.obj (.text)
+                                        8000fda4                     : info.obj (.text)
+                                        8000fd80                     : info.obj (.text)
+                                        8000fd04                     : info.obj (.text)
+_strlen   00000000  .T$000b   80010360  8000fe88                     : info.obj (.text)
+                                        8000fdd4                     : info.obj (.text)
+                                        8000fd58                     : info.obj (.text)
+                                        8000fd50                     : info.obj (.text)
+                                        8000fcac                     : info.obj (.text)
+_fopen    00000000  .T$000c   80010280  8000d298   dump_video.obj (.text)
+                                        8000d27c   dump_video.obj (.text)
+__strasgi_64plus
+          00000000  .T$000d   80010060  80003418   theora-DM6446.lib : decode.obj (.text)
+                                        800033e0                     : decode.obj (.text)
+                                        800033b4                     : decode.obj (.text)
+                                        800076e4                     : state.obj (.text)
+                                        8000ee84                     : decapiwrapper.obj (.text)
+_exit     00000000  .T$000e   800102c0  8000d4f8   dump_video.obj (.text)
+                                        8000d454   dump_video.obj (.text)
+                                        8000d420   dump_video.obj (.text)
+__llshl   00000000  .T$000f   800100a0  800060a0   theora-DM6446.lib : decode.obj (.text)
+                                        80005a04                     : decode.obj (.text)
+                                        80008aa8                     : state.obj (.text)
+                                        80006be4                     : state.obj (.text)
+__llshr   00000000  .T$0010   80010080  800056a4                     : decode.obj (.text)
+                                        80008a8c                     : state.obj (.text)
+__fltud   00000000  .T$0011   80010120  80008bb0                     : state.obj (.text)
+                                        80008ba0                     : state.obj (.text)
+                                        8000d54c   dump_video.obj (.text)
+                                        8000d53c   dump_video.obj (.text)
+_fprintf  00000000  .T$0012   800102a0  8000d5e0   dump_video.obj (.text)
+                                        8000d4ec   dump_video.obj (.text)
+                                        8000d410   dump_video.obj (.text)
+_toupper  00000000  .T$0013   80010340  8000fb84   theora-DM6446.lib : info.obj (.text)
+                                        8000fb70                     : info.obj (.text)
+_fwrite   00000000  .T$0014   80010260  8000d1e4   dump_video.obj (.text)
+                                        8000d194   dump_video.obj (.text)
+                                        8000d148   dump_video.obj (.text)
+_fclose   00000000  .T$0015   80010300  8000d800   dump_video.obj (.text)
+_malloc   00000000  .T$0016   80010020  80005530   theora-DM6446.lib : decode.obj (.text)
+                                        80002e08                     : decode.obj (.text)
+                                        80007258                     : state.obj (.text)
+                                        80007070                     : state.obj (.text)
+                                        80007040                     : state.obj (.text)
+                                        80009cc8   ogg-DM6446.lib : framing.obj (.text)
+                                        80008fe4                  : framing.obj (.text)
+                                        80008fb8                  : framing.obj (.text)
+                                        80008f88                  : framing.obj (.text)
+                                        8000c504   theora-DM6446.lib : decinfo.obj (.text)
+                                        8000c464                     : decinfo.obj (.text)
+                                        8000c44c                     : decinfo.obj (.text)
+                                        8000c390                     : decinfo.obj (.text)
+                                        8000cd28                     : dequant.obj (.text)
+                                        8000ccec                     : dequant.obj (.text)
+                                        8000c9c0                     : dequant.obj (.text)
+                                        8000dc00                     : internal.obj (.text)
+                                        8000fd70                     : info.obj (.text)
+                                        8000fcd4                     : info.obj (.text)
+__divli   00000000  .T$0017   80010180  800093a4   ogg-DM6446.lib : framing.obj (.text)
+_memmove  00000000  .T$0018   800101a0  8000a278                  : framing.obj (.text)
+                                        8000a244                  : framing.obj (.text)
+                                        8000a1d4                  : framing.obj (.text)
+                                        80009c50                  : framing.obj (.text)
+                                        80009aa8                  : framing.obj (.text)
+                                        80009a80                  : framing.obj (.text)
+                                        80009410                  : framing.obj (.text)
+__divd    00000000  .T$0019   80010140  80008bb8   theora-DM6446.lib : state.obj (.text)
+                                        8000d558   dump_video.obj (.text)
+                                        8000d700   dump_video.obj (.text)
+_calloc   00000000  .T$001a   800100c0  80007028   theora-DM6446.lib : state.obj (.text)
+                                        80006fe4                     : state.obj (.text)
+                                        80006fc0                     : state.obj (.text)
+                                        8000b8b0                     : huffdec.obj (.text)
+                                        8000c738                     : decinfo.obj (.text)
+                                        8000dcac                     : internal.obj (.text)
+                                        8000ef60                     : decapiwrapper.obj (.text)
+                                        8000ee74                     : decapiwrapper.obj (.text)
+__divi    00000000  .T$001b   80010220  8000ce30                     : dequant.obj (.text)
+                                        8000ce0c                     : dequant.obj (.text)
+                                        8000cb74                     : dequant.obj (.text)
+                                        8000cb48                     : dequant.obj (.text)
+                                        8000ca80                     : dequant.obj (.text)
+                                        8000e950                     : quant.obj (.text)
+__divu    00000000  .T$001c   80010320  8000e764                     : quant.obj (.text)
+                                        8000e6a8                     : quant.obj (.text)
+                                        8000e674                     : quant.obj (.text)
+__mpyd    00000000  .T$001d   80010160  80008bc8                     : state.obj (.text)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80011798   $bss
+80011798   .bss
+80000000   .data
+80000000   .text
+800116c8   _OC_AC_QUANT_MIN
+80010780   _OC_DCT_TOKEN_EXTRA_BITS
+800116c0   _OC_DC_QUANT_MIN
+80010680   _OC_FRAME_FOR_MODE
+80010380   _OC_FZIG_ZAG
+80010580   _OC_IZIG_ZAG
+800106a0   _OC_MB_MAP
+800106b0   _OC_MB_MAP_IDXS
+80010770   _OC_MB_MAP_NIDXS
+80010880   _OC_SET_CHROMA_MVS_TABLE
+ffffffff   ___binit__
+80011798   ___bss__
+ffffffff   ___c_args__
+800116d0   ___cinit__
+80000000   ___data__
+80000000   ___edata__
+800117c0   ___end__
+80010380   ___etext__
+ffffffff   ___pinit__
+80000000   ___text__
+UNDEFED __divd
+UNDEFED __divi
+UNDEFED __divli
+UNDEFED __divu
+UNDEFED __fltllid
+UNDEFED __fltud
+UNDEFED __ftable
+UNDEFED __llshl
+UNDEFED __llshr
+UNDEFED __mpyd
+UNDEFED __remi
+UNDEFED __remli
+UNDEFED __strasgi_64plus
+8000d0a0   _buffer_data
+UNDEFED _c_int00
+UNDEFED _calloc
+UNDEFED _exit
+UNDEFED _fclose
+UNDEFED _feof
+UNDEFED _fopen
+UNDEFED _fprintf
+UNDEFED _fread
+UNDEFED _free
+UNDEFED _fwrite
+800117bc   _got_sigint
+8000d238   _main
+UNDEFED _malloc
+UNDEFED _memchr
+UNDEFED _memcmp
+UNDEFED _memcpy
+UNDEFED _memmove
+UNDEFED _memset
+8000dc6c   _oc_calloc_2d
+8000d94c   _oc_dct_token_skip
+8000e520   _oc_dequant_tables_init
+8000e26c   _oc_frag_pred_dc
+8000dfa4   _oc_frag_recon_inter
+8000e0d8   _oc_frag_recon_inter2
+8000e140   _oc_frag_recon_inter2_c
+8000dfe8   _oc_frag_recon_inter_c
+8000dec0   _oc_frag_recon_intra
+8000def4   _oc_frag_recon_intra_c
+8000dd14   _oc_free_2d
+8000bee0   _oc_huff_token_decode
+8000bea0   _oc_huff_trees_clear
+8000be54   _oc_huff_trees_copy
+8000bde8   _oc_huff_trees_unpack
+8000b4c0   _oc_idct8x8_10_c
+8000b3c8   _oc_idct8x8_c
+8000d840   _oc_ilog
+8000dbc4   _oc_malloc_2d
+8000cdec   _oc_quant_params_clear
+8000c840   _oc_quant_params_unpack
+80006180   _oc_restore_fpu
+800061a0   _oc_restore_fpu_c
+80007aec   _oc_state_borders_fill
+8000796c   _oc_state_borders_fill_caps
+80007844   _oc_state_borders_fill_rows
+8000782c   _oc_state_clear
+80007b60   _oc_state_fill_buffer_ptrs
+80008288   _oc_state_frag_copy
+800082c4   _oc_state_frag_copy_c
+80007eb4   _oc_state_frag_recon
+80007f0c   _oc_state_frag_recon_c
+80007d54   _oc_state_get_mv_offsets
+800075e0   _oc_state_init
+80008790   _oc_state_loop_filter_frag_rows
+800087cc   _oc_state_loop_filter_frag_rows_c
+80008680   _oc_state_loop_filter_init
+80007cf8   _oc_state_mbi_for_pos
+800075cc   _oc_state_vtable_init
+80007518   _oc_state_vtable_init_c
+8000f840   _oc_theora_info2th_info
+8000dd28   _oc_ycbcr_buffer_flip
+800112f0   _og
+8000aa2c   _ogg_packet_clear
+80008c38   _ogg_page_bos
+800091cc   _ogg_page_checksum_set
+80008c18   _ogg_page_continued
+80008c58   _ogg_page_eos
+80008c78   _ogg_page_granulepos
+80008ed0   _ogg_page_packets
+80008e78   _ogg_page_pageno
+80008e28   _ogg_page_serialno
+80008c00   _ogg_page_version
+80009018   _ogg_stream_clear
+80009074   _ogg_stream_destroy
+80009b68   _ogg_stream_eos
+800095e0   _ogg_stream_flush
+80008f4c   _ogg_stream_init
+80009388   _ogg_stream_packetin
+8000a9f4   _ogg_stream_packetout
+8000aa10   _ogg_stream_packetpeek
+8000a0b8   _ogg_stream_pagein
+80009ad8   _ogg_stream_pageout
+8000a6cc   _ogg_stream_reset
+8000a78c   _ogg_stream_reset_serialno
+80009bf4   _ogg_sync_buffer
+80009ba4   _ogg_sync_clear
+80009bd0   _ogg_sync_destroy
+80009b84   _ogg_sync_init
+8000a064   _ogg_sync_pageout
+80009d4c   _ogg_sync_pageseek
+8000a678   _ogg_sync_reset
+80009cf8   _ogg_sync_wrote
+800117b8   _outfile
+800112d0   _oy
+UNDEFED _printf
+UNDEFED _realloc
+8001179c   _stateflag
+UNDEFED _strlen
+80011698   _tc
+800116a8   _td
+8000fc50   _th_comment_add
+8000fd40   _th_comment_add_tag
+8000ff08   _th_comment_clear
+8000fc38   _th_comment_init
+8000fdc4   _th_comment_query
+8000fe74   _th_comment_query_count
+8000550c   _th_decode_alloc
+80005598   _th_decode_ctl
+80005578   _th_decode_free
+8000c7b4   _th_decode_headerin
+800057b4   _th_decode_packetin
+80006140   _th_decode_ycbcr_out
+80008a44   _th_granule_frame
+80008b44   _th_granule_time
+8000fc24   _th_info_clear
+8000fbd4   _th_info_init
+8000de38   _th_packet_isheader
+8000de70   _th_packet_iskeyframe
+8000c810   _th_setup_free
+8000de2c   _th_version_number
+8000de20   _th_version_string
+8000f6c0   _theora_clear
+8000faec   _theora_comment_add
+8000fb08   _theora_comment_add_tag
+8000fad8   _theora_comment_clear
+8000fa8c   _theora_comment_init
+8000faa0   _theora_comment_query
+8000fac0   _theora_comment_query_count
+8000f718   _theora_control
+8000f020   _theora_decode_YUVout
+8000ef38   _theora_decode_header
+8000ee54   _theora_decode_init
+8000efc8   _theora_decode_packetin
+8000f770   _theora_granule_frame
+8000fa6c   _theora_granule_shift
+8000f7d4   _theora_granule_time
+8000f670   _theora_info_clear
+8000f658   _theora_info_init
+80011798   _theora_p
+8000fa48   _theora_packet_isheader
+8000fa58   _theora_packet_iskeyframe
+8000f64c   _theora_version_number
+8000f640   _theora_version_string
+8000f1f0   _theorapackB_adv1
+8000f5ec   _theorapackB_bits
+8000f5b4   _theorapackB_bytes
+8000f618   _theorapackB_get_buffer
+8000f174   _theorapackB_look1
+8000f24c   _theorapackB_read
+8000f4ec   _theorapackB_read1
+8000f130   _theorapackB_readinit
+8000f0e0   _theorapackB_reset
+80011630   _ti
+800114a0   _to
+UNDEFED _toupper
+800117a8   _videobuf_granulepos
+800117a0   _videobuf_ready
+800117b0   _videobuf_time
+80011310   _vo
+ffffffff   binit
+800116d0   cinit
+80000000   edata
+800117c0   end
+80010380   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+80000000   .data
+80000000   .text
+80000000   ___data__
+80000000   ___edata__
+80000000   ___text__
+80000000   edata
+8000550c   _th_decode_alloc
+80005578   _th_decode_free
+80005598   _th_decode_ctl
+800057b4   _th_decode_packetin
+80006140   _th_decode_ycbcr_out
+80006180   _oc_restore_fpu
+800061a0   _oc_restore_fpu_c
+80007518   _oc_state_vtable_init_c
+800075cc   _oc_state_vtable_init
+800075e0   _oc_state_init
+8000782c   _oc_state_clear
+80007844   _oc_state_borders_fill_rows
+8000796c   _oc_state_borders_fill_caps
+80007aec   _oc_state_borders_fill
+80007b60   _oc_state_fill_buffer_ptrs
+80007cf8   _oc_state_mbi_for_pos
+80007d54   _oc_state_get_mv_offsets
+80007eb4   _oc_state_frag_recon
+80007f0c   _oc_state_frag_recon_c
+80008288   _oc_state_frag_copy
+800082c4   _oc_state_frag_copy_c
+80008680   _oc_state_loop_filter_init
+80008790   _oc_state_loop_filter_frag_rows
+800087cc   _oc_state_loop_filter_frag_rows_c
+80008a44   _th_granule_frame
+80008b44   _th_granule_time
+80008c00   _ogg_page_version
+80008c18   _ogg_page_continued
+80008c38   _ogg_page_bos
+80008c58   _ogg_page_eos
+80008c78   _ogg_page_granulepos
+80008e28   _ogg_page_serialno
+80008e78   _ogg_page_pageno
+80008ed0   _ogg_page_packets
+80008f4c   _ogg_stream_init
+80009018   _ogg_stream_clear
+80009074   _ogg_stream_destroy
+800091cc   _ogg_page_checksum_set
+80009388   _ogg_stream_packetin
+800095e0   _ogg_stream_flush
+80009ad8   _ogg_stream_pageout
+80009b68   _ogg_stream_eos
+80009b84   _ogg_sync_init
+80009ba4   _ogg_sync_clear
+80009bd0   _ogg_sync_destroy
+80009bf4   _ogg_sync_buffer
+80009cf8   _ogg_sync_wrote
+80009d4c   _ogg_sync_pageseek
+8000a064   _ogg_sync_pageout
+8000a0b8   _ogg_stream_pagein
+8000a678   _ogg_sync_reset
+8000a6cc   _ogg_stream_reset
+8000a78c   _ogg_stream_reset_serialno
+8000a9f4   _ogg_stream_packetout
+8000aa10   _ogg_stream_packetpeek
+8000aa2c   _ogg_packet_clear
+8000b3c8   _oc_idct8x8_c
+8000b4c0   _oc_idct8x8_10_c
+8000bde8   _oc_huff_trees_unpack
+8000be54   _oc_huff_trees_copy
+8000bea0   _oc_huff_trees_clear
+8000bee0   _oc_huff_token_decode
+8000c7b4   _th_decode_headerin
+8000c810   _th_setup_free
+8000c840   _oc_quant_params_unpack
+8000cdec   _oc_quant_params_clear
+8000d0a0   _buffer_data
+8000d238   _main
+8000d840   _oc_ilog
+8000d94c   _oc_dct_token_skip
+8000dbc4   _oc_malloc_2d
+8000dc6c   _oc_calloc_2d
+8000dd14   _oc_free_2d
+8000dd28   _oc_ycbcr_buffer_flip
+8000de20   _th_version_string
+8000de2c   _th_version_number
+8000de38   _th_packet_isheader
+8000de70   _th_packet_iskeyframe
+8000dec0   _oc_frag_recon_intra
+8000def4   _oc_frag_recon_intra_c
+8000dfa4   _oc_frag_recon_inter
+8000dfe8   _oc_frag_recon_inter_c
+8000e0d8   _oc_frag_recon_inter2
+8000e140   _oc_frag_recon_inter2_c
+8000e26c   _oc_frag_pred_dc
+8000e520   _oc_dequant_tables_init
+8000ee54   _theora_decode_init
+8000ef38   _theora_decode_header
+8000efc8   _theora_decode_packetin
+8000f020   _theora_decode_YUVout
+8000f0e0   _theorapackB_reset
+8000f130   _theorapackB_readinit
+8000f174   _theorapackB_look1
+8000f1f0   _theorapackB_adv1
+8000f24c   _theorapackB_read
+8000f4ec   _theorapackB_read1
+8000f5b4   _theorapackB_bytes
+8000f5ec   _theorapackB_bits
+8000f618   _theorapackB_get_buffer
+8000f640   _theora_version_string
+8000f64c   _theora_version_number
+8000f658   _theora_info_init
+8000f670   _theora_info_clear
+8000f6c0   _theora_clear
+8000f718   _theora_control
+8000f770   _theora_granule_frame
+8000f7d4   _theora_granule_time
+8000f840   _oc_theora_info2th_info
+8000fa48   _theora_packet_isheader
+8000fa58   _theora_packet_iskeyframe
+8000fa6c   _theora_granule_shift
+8000fa8c   _theora_comment_init
+8000faa0   _theora_comment_query
+8000fac0   _theora_comment_query_count
+8000fad8   _theora_comment_clear
+8000faec   _theora_comment_add
+8000fb08   _theora_comment_add_tag
+8000fbd4   _th_info_init
+8000fc24   _th_info_clear
+8000fc38   _th_comment_init
+8000fc50   _th_comment_add
+8000fd40   _th_comment_add_tag
+8000fdc4   _th_comment_query
+8000fe74   _th_comment_query_count
+8000ff08   _th_comment_clear
+80010380   _OC_FZIG_ZAG
+80010380   ___etext__
+80010380   etext
+80010580   _OC_IZIG_ZAG
+80010680   _OC_FRAME_FOR_MODE
+800106a0   _OC_MB_MAP
+800106b0   _OC_MB_MAP_IDXS
+80010770   _OC_MB_MAP_NIDXS
+80010780   _OC_DCT_TOKEN_EXTRA_BITS
+80010880   _OC_SET_CHROMA_MVS_TABLE
+800112d0   _oy
+800112f0   _og
+80011310   _vo
+800114a0   _to
+80011630   _ti
+80011698   _tc
+800116a8   _td
+800116c0   _OC_DC_QUANT_MIN
+800116c8   _OC_AC_QUANT_MIN
+800116d0   ___cinit__
+800116d0   cinit
+80011798   $bss
+80011798   .bss
+80011798   ___bss__
+80011798   _theora_p
+8001179c   _stateflag
+800117a0   _videobuf_ready
+800117a8   _videobuf_granulepos
+800117b0   _videobuf_time
+800117b8   _outfile
+800117bc   _got_sigint
+800117c0   ___end__
+800117c0   end
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+UNDEFED __divd
+UNDEFED __divi
+UNDEFED __divli
+UNDEFED __divu
+UNDEFED __fltllid
+UNDEFED __fltud
+UNDEFED __ftable
+UNDEFED __llshl
+UNDEFED __llshr
+UNDEFED __mpyd
+UNDEFED __remi
+UNDEFED __remli
+UNDEFED __strasgi_64plus
+UNDEFED _c_int00
+UNDEFED _calloc
+UNDEFED _exit
+UNDEFED _fclose
+UNDEFED _feof
+UNDEFED _fopen
+UNDEFED _fprintf
+UNDEFED _fread
+UNDEFED _free
+UNDEFED _fwrite
+UNDEFED _malloc
+UNDEFED _memchr
+UNDEFED _memcmp
+UNDEFED _memcpy
+UNDEFED _memmove
+UNDEFED _memset
+UNDEFED _printf
+UNDEFED _realloc
+UNDEFED _strlen
+UNDEFED _toupper
+ffffffff   binit
+ffffffff   pinit
+
+[202 symbols]
